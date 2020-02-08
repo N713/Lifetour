@@ -11,10 +11,12 @@ var csso = require("gulp-csso");
 var rename = require("gulp-rename");
 var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
-var svgstore = require("gulp-svgstore")
+var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var del = require("del");
+var webpack = require('webpack-stream');
+var babel = require('gulp-babel');
 
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
@@ -85,7 +87,6 @@ gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
-    "source/js/**",
     "source//*.ico"
     ], {
       base: "source"
@@ -97,5 +98,18 @@ gulp.task("clean", function () {
   return del("build");
 });
 
-gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html"));
+gulp.task("webpack", function() {
+  return gulp.src("source/js/script.js")
+    .pipe(webpack(require("./webpack.config.js")))
+    .pipe(gulp.dest("source/js"));
+});
+
+gulp.task("babel", function () {
+  return gulp.src("source/js/*.js")
+    .pipe(babel())
+    .pipe(gulp.dest("build/js"));
+});
+
+gulp.task("scripts", gulp.series("webpack", "babel"));
+gulp.task("build", gulp.series("clean", "scripts", "copy", "css", "sprite", "html"));
 gulp.task("start", gulp.series("build", "server"));
