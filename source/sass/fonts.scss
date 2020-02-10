@@ -33,3 +33,12 @@
   font-style: bold;
   font-display: swap;
 }
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/montserratblack.woff2") format("woff2"),
+  url("../fonts/montserratblack.woff") format("woff");
+  font-weight: 900;
+  font-style: bold;
+  font-display: swap;
+}
