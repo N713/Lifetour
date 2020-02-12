@@ -1,0 +1,20 @@
+.wrapper {
+  width: 100%;
+  background-color: $mainBlue;
+  background-image: url("../img/main-background@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.wrapper__clouds {
+  background-image: url("../img/main-clouds@1x.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.wrapper__lines {
+  background-image: url("../img/lines.svg");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: left 50% top 8%;
+}

@@ -1,0 +1,27 @@
+.button {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 246px;
+  height: 59px;
+  border: none;
+  background-color: $mainBlue;
+  text-decoration: none;
+  color: white;
+
+  &:hover {
+    cursor: pointer;
+    outline: 2px solid white;
+  }
+
+  &:active {
+    opacity: 0.2;
+    cursor: pointer;
+  }
+}
+
+.button--left,
+.button--right {
+  width: 37px;
+  height: 35px;
+}

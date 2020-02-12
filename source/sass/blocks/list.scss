@@ -1,0 +1,25 @@
+.list {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.list,
+.list__item {
+  @include reset;
+}
+
+.list__item-link {
+  text-decoration: none;
+  color: white;
+
+  &:hover {
+    border-bottom: 2px solid white;
+  }
+
+  &:active {
+    opacity: 0.2;
+  }
+}

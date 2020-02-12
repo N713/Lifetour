@@ -1,0 +1,51 @@
+.main-screen {
+  box-sizing: border-box;
+  max-width: $maxWidthDesktop;
+  margin: 0 auto;
+  color: white;
+  padding: 0 20px;
+  padding-top: 146px;
+}
+
+.main-screen h1,
+.main-screen p {
+  @include reset;
+}
+
+.main-screen h1 {
+  display: block;
+  position: relative;
+  font-weight: 800;
+  font-size: 45px;
+  line-height: 55px;
+  margin-bottom: 11px;
+}
+
+.main-screen h1::after {
+  content: "Trekking";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: -13px;
+  font-family: $montserrat;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 93px;
+  line-height: 113px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #F5F9FC;
+  opacity: 0.2;
+}
+
+.main-screen p {
+  font-size: 19px;
+  line-height: 28px;
+  width: 468px;
+  margin-bottom: 40px;
+}
+
+.main-screen__button,
+.main-screen__list {
+  margin-bottom: 110px;
+}

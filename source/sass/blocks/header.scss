@@ -1,0 +1,38 @@
+.header {
+  box-sizing: border-box;
+  max-width: $maxWidthDesktop;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 43px 20px;
+  color: white;
+}
+
+.header img {
+  padding-right: 15px;
+}
+
+.header__nav {
+  display: flex;
+  width: (736 / 1092) * 100%;
+  align-items: center;
+}
+
+.header__phone-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 30px;
+  color: white;
+  padding-left: 15px;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.2;
+  };
+}
