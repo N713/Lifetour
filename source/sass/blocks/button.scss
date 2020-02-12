@@ -24,4 +24,31 @@
 .button--right {
   width: 37px;
   height: 35px;
+  padding: 5px;
+  margin: 0;
+  margin-left: 4px;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  &:hover {
+    outline: 2px solid $mainDark;
+  }
+}
+
+.button--left {
+  background-image: url("../img/icon-arrow-to-left.svg");
+}
+
+.button--right {
+  background-image: url("../img/icon-arrow-to-right.svg");
+}
+
+@media (max-width: $tabletResolution) {
+  .button {
+    box-sizing: border-box;
+    width: 191px;
+    height: 47px;
+    font-size: 14px;
+    line-height: 22px;
+  }
 }

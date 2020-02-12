@@ -1,20 +1,44 @@
 .wrapper {
   width: 100%;
-  background-color: $mainBlue;
+  //background-color: $mainBlue;
   background-image: url("../img/main-background@1x.jpg");
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: center top;
 }
 
 .wrapper__clouds {
   background-image: url("../img/main-clouds@1x.png");
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: center top 5%;
 }
 
 .wrapper__lines {
   background-image: url("../img/lines.svg");
   background-size: auto;
-  background-repeat: no-repeat;
-  background-position: left 50% top 8%;
+  background-repeat: repeat-y;
+  background-position: left 50% top -20px;
+}
+
+@media (max-width: $tabletResolution) {
+  .wrapper {
+    background-size: 1168px 628px;
+    background-position: center top 3%;
+  }
+
+  .wrapper__lines {
+    background-size: 950px 812.5px;
+    background-position: left 50% top -1%;
+  }
+
+  .wrapper__clouds {
+    background-position: center top 15%;
+  }
+}
+
+@media (max-width: $mobileResolution) {
+  .wrapper__lines {
+    background-image: none;
+  }
 }

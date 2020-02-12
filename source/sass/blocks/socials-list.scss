@@ -71,3 +71,19 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+
+@media (max-width: $tabletResolution) {
+  .socials-list__item {
+    background-color: rgba(2, 102, 193, 0.43);
+  }
+
+  .socials-list__item--footer {
+    background-color: transparent;
+  }
+}
+
+@media (max-width: $mobileResolution) {
+  .main-screen .socials-list {
+    display: none;
+  }
+}

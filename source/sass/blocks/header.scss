@@ -3,6 +3,7 @@
   max-width: $maxWidthDesktop;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 0 auto;
   padding: 43px 20px;
   color: white;
@@ -34,5 +35,41 @@
 
   &:active {
     opacity: 0.2;
-  };
+  }
+}
+
+@media (max-width: $tabletResolution) {
+  .header {
+    padding: 36px 106px;
+  }
+
+  .header img {
+    width: 142px;
+    height: 40px;
+  }
+
+  .header__nav {
+    display: none;
+  }
+
+  .header__phone-link {
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
+
+@media (max-width: $mobileResolution) {
+  .header {
+    padding: 13px 20px;
+  }
+
+  .header img {
+    width: 108px;
+    height: 30px;
+  }
+
+  .header__phone-link {
+    font-size: 14px;
+    line-height: 22px;
+  }
 }

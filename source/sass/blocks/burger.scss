@@ -1,3 +1,23 @@
 .burger {
   display: none;
+  border: none;
+  background-color: transparent;
+}
+
+@media (max-width: $tabletResolution) {
+  .burger {
+    display: flex;
+    width: 23.9px;
+    height: 16.2px;
+
+    @include reset;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:active {
+      opacity: 0.2;
+    }
+  }
 }

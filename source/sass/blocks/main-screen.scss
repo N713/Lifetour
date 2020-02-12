@@ -34,7 +34,7 @@
   line-height: 113px;
   letter-spacing: 0.07em;
   text-transform: uppercase;
-  color: #F5F9FC;
+  color: #f5f9fc;
   opacity: 0.2;
 }
 
@@ -48,4 +48,45 @@
 .main-screen__button,
 .main-screen__list {
   margin-bottom: 110px;
+}
+
+@media (max-width: $tabletResolution) {
+  .main-screen {
+    padding: 0 106px;
+    padding-top: 127px;
+  }
+
+  .main-screen h1 {
+    width: 300px;
+    font-weight: 800;
+    font-size: 35px;
+    line-height: 43px;
+    margin-bottom: 16px;
+  }
+
+  .main-screen h1::after {
+    display: none;
+  }
+
+  .main-screen p {
+    margin-bottom: 26px;
+  }
+
+  .main-screen__button {
+    margin-bottom: 90px;
+  }
+}
+
+@media (max-width: $mobileResolution) {
+  .main-screen {
+    padding: 0 20px;
+    padding-top: 77px;
+  }
+
+  .main-screen h1 {
+    width: 230px;
+    font-size: 27px;
+    line-height: 33px;
+    margin-bottom: 10px;
+  }
 }
