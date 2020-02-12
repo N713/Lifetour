@@ -1,7 +1,16 @@
 @font-face {
   font-family: "Montserrat";
+  src: url("../fonts/montserratlight.woff2") format("woff2"),
+    url("../fonts/montserratlight.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
   src: url("../fonts/montserratregular.woff2") format("woff2"),
-  url("../fonts/montserratregular.woff") format("woff");
+    url("../fonts/montserratregular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -10,7 +19,7 @@
 @font-face {
   font-family: "Montserrat";
   src: url("../fonts/montserratmedium.woff2") format("woff2"),
-  url("../fonts/montserratmedium.woff") format("woff");
+    url("../fonts/montserratmedium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -19,26 +28,26 @@
 @font-face {
   font-family: "Montserrat";
   src: url("../fonts/montserratbold.woff2") format("woff2"),
-  url("../fonts/montserratbold.woff") format("woff");
+    url("../fonts/montserratbold.woff") format("woff");
   font-weight: 700;
-  font-style: bold;
+  font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: "Montserrat";
   src: url("../fonts/montserratextrabold.woff2") format("woff2"),
-  url("../fonts/montserratextrabold.woff") format("woff");
+    url("../fonts/montserratextrabold.woff") format("woff");
   font-weight: 800;
-  font-style: bold;
+  font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: "Montserrat";
   src: url("../fonts/montserratblack.woff2") format("woff2"),
-  url("../fonts/montserratblack.woff") format("woff");
+    url("../fonts/montserratblack.woff") format("woff");
   font-weight: 900;
-  font-style: bold;
+  font-style: normal;
   font-display: swap;
 }

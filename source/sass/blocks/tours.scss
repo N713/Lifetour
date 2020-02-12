@@ -4,7 +4,6 @@
   max-width: $maxWidthDesktop;
   margin: 0 auto;
   padding-top: 50px;
-  background-color: white;
 }
 
 .tours h2 {
@@ -70,18 +69,40 @@
 }
 
 .tours__list-item-wrapper p {
+  display: flex;
+  flex-direction: column;
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
   line-height: 29px;
   width: 242px;
   min-height: 49px;
+  position: relative;
 
   @include reset;
+  padding-bottom: 27px;
+  margin-bottom: 17px;
+}
+
+.tours__list-item-wrapper p::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 79px;
+  height: 1px;
+  background-color: white;
+  opacity: 0.28;
 }
 
 .tours__list-item-inner-list {
   justify-content: space-between;
+  margin-bottom: 23px;
+}
+
+.tours__list-item-inner-list:last-of-type {
+  margin-bottom: 0;
 }
 
 .tours__list-item-inner-list-item {
