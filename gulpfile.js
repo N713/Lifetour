@@ -101,7 +101,7 @@ gulp.task("clean", function () {
 gulp.task("webpack", function() {
   return gulp.src("source/js/script.js")
     .pipe(webpack(require("./webpack.config.js")))
-    .pipe(gulp.dest("source/js"));
+    .pipe(gulp.dest("build/js"));
 });
 
 gulp.task("babel", function () {

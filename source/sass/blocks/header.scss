@@ -9,18 +9,30 @@
   color: white;
 }
 
-.header img {
+.header__logo-link {
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.2;
+  }
+}
+
+.header__logo-img {
   padding-right: 15px;
 }
 
 .header__nav {
   display: flex;
-  width: (736 / 1092) * 100%;
+  width: 100%;
   align-items: center;
+  padding: 0 3%;
 }
 
 .header__phone-link {
   display: flex;
+  min-width: fit-content;
   align-items: center;
   text-decoration: none;
   font-weight: bold;
@@ -36,6 +48,14 @@
   &:active {
     opacity: 0.2;
   }
+}
+
+.header__list {
+  justify-content: space-evenly;
+}
+
+.header__list-item {
+  margin: 0 1%;
 }
 
 @media (max-width: $tabletResolution) {

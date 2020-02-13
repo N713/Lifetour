@@ -22,7 +22,7 @@
 }
 
 .main-screen h1::after {
-  content: "Trekking";
+  content: attr(data-name) "";
   display: inline-block;
   position: absolute;
   left: 0;
@@ -45,8 +45,7 @@
   margin-bottom: 40px;
 }
 
-.main-screen__button,
-.main-screen__list {
+.main-screen__button {
   margin-bottom: 110px;
 }
 

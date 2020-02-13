@@ -7,25 +7,11 @@
 }
 
 .tours h2 {
-  font-weight: 800;
-  font-size: 35px;
-  line-height: 43px;
-  position: relative;
-  color: $mainDark;
+  @include sectionHeaderDesktop;
 }
 
 .tours h2::after {
-  content: "Ближайшие туры";
-  display: inline-block;
-  position: absolute;
-  left: -1%;
-  bottom: -10%;
-  width: 542px;
-  font-weight: 800;
-  font-size: 55px;
-  line-height: 67px;
-  color: #2D383F;
-  opacity: 0.03;
+  @include sectionHeaderDesktopPseudo;
 }
 
 .tours__wrapper,
@@ -117,7 +103,7 @@
 }
 
 .tours__list-item-inner-list-item--place {
-  width: 114.56px;
+  width: 115px;
   background-color: $mainBlue;
   text-align: center;
 }
@@ -127,7 +113,7 @@
   display: inline-block;
   width: 9px;
   height: 12px;
-  margin-right: 6.4px;
+  margin-right: 6.5px;
   background-image: url("../img/icon-map-position.svg");
   background-position: center center;
   background-repeat: no-repeat;
@@ -138,7 +124,7 @@
   display: inline-block;
   width: 22px;
   height: 22px;
-  margin-right: 6.9px;
+  margin-right: 7px;
   background-image: url("../img/icon-sun.svg");
   background-position: center center;
   background-repeat: no-repeat;
@@ -202,4 +188,51 @@
   background-image: url("../img/all-tours-icon.svg");
   background-position: center center;
   background-repeat: no-repeat;
+}
+
+@media (max-width: $tabletResolution) {
+  .tours h2 {
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  .tours h2::after {
+    font-size: 40px;
+    line-height: 49px;
+  }
+}
+
+@media (max-width: $mobileResolution) {
+  .tours h2 {
+    width: 156px;
+    font-size: 22px;
+    line-height: 27px;
+  }
+
+  .tours h2::after {
+    display: none;
+  }
+
+  .tours__list-item img:first-child,
+  .tours__list-item-wrapper {
+    width: 281px;
+  }
+
+  .tours__list-item-inner-list {
+    flex-wrap: wrap-reverse;
+  }
+
+  .tours__list-item-inner-list:last-of-type {
+    flex-wrap: nowrap;
+  }
+
+  .tours__list-item-inner-list-item--days {
+    position: relative;
+    bottom: 53px;
+    right: 38px;
+  }
+
+  .tours__list-item-inner-list-item--nights {
+    margin-bottom: 20px;
+  }
 }

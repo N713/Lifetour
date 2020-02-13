@@ -20,6 +20,11 @@
   }
 }
 
+.button__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
 .button--left,
 .button--right {
   width: 37px;
@@ -50,5 +55,11 @@
     height: 47px;
     font-size: 14px;
     line-height: 22px;
+  }
+
+  .button--left,
+  .button--right {
+    width: 37px;
+    height: 35px;
   }
 }

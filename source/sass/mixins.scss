@@ -2,3 +2,25 @@
   margin: 0;
   padding: 0;
 }
+
+@mixin sectionHeaderDesktop {
+  font-weight: 800;
+  font-size: 35px;
+  line-height: 43px;
+  position: relative;
+  color: $mainDark;
+}
+
+@mixin sectionHeaderDesktopPseudo {
+  content: attr(data-name) "";
+  display: inline-block;
+  position: absolute;
+  left: -1%;
+  bottom: -10%;
+  width: 542px;
+  font-weight: 800;
+  font-size: 55px;
+  line-height: 67px;
+  color: #2D383F;
+  opacity: 0.03;
+}

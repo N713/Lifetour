@@ -5,7 +5,7 @@ module.exports = {
   entry: `./source/js/script.js`,
   output: {
     filename: `script.js`,
-    path: path.join(__dirname, `source`)
+    path: path.join(__dirname, `build`)
   },
   devtool: `source-map`,
   devServer: {

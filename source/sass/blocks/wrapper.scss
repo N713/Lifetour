@@ -1,52 +1,21 @@
 .wrapper {
-  background-image: url("../img/main-background@1x.jpg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center top;
-}
-
-.wrapper__clouds {
-  background-image: url("../img/main-clouds@1x.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center top 2%;
-}
-
-.wrapper__lines {
-  background-image: url("../img/lines.svg");
-  background-size: auto;
-  background-repeat: repeat-y;
-  background-position: left 50% top -20px;
+  background-image: url("../img/lines.svg"), url("../img/main-back@1x.jpg");
+  background-repeat: repeat-y, no-repeat;
+  background-size: auto, cover;
+  background-position: left 50% top -20px, center top;
+  padding-bottom: 180px;
 }
 
 @media (max-width: $tabletResolution) {
   .wrapper {
-    background-size: 1168px 628px;
-    background-position: center top;
-  }
-
-  .wrapper__lines {
-    background-size: 950px 812.5px;
-    background-position: left 50% top -1%;
-  }
-
-  .wrapper__clouds {
-    background-size: 1440px 1390px;
-    background-position: center top -6%;
+    background-size: 950px 812.5px, cover;
+    background-position: left 50% top -1%, center top;
   }
 }
 
 @media (max-width: $mobileResolution) {
   .wrapper {
-    background-size: 880px 470px;
-  }
-
-  .wrapper__lines {
-    background-image: none;
-  }
-
-  .wrapper__clouds {
-    background-size: 910px 878px;
-    background-position: center top 2%;
+    background-image: none, url("../img/main-back@1x.jpg");
+    background-position: center, left 70% top;
   }
 }
