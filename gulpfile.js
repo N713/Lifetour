@@ -43,6 +43,7 @@ gulp.task("server", function () {
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
   gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
+  gulp.watch("source/js/*.js", gulp.series("webpack", "refresh"));
 });
 
 gulp.task("refresh", function (done) {
@@ -100,16 +101,26 @@ gulp.task("clean", function () {
 
 gulp.task("webpack", function() {
   return gulp.src("source/js/script.js")
-    .pipe(webpack(require("./webpack.config.js")))
+    .pipe(webpack({
+      mode: "development",
+      output: {
+        filename: "main.js",
+      },
+      module: {
+        rules: [
+          {
+            test: /\.(js)$/,
+            exclude: /(node_modules)/,
+            loader: "babel-loader",
+            query: {
+              presets: ["env"]
+            }
+          }
+        ]
+      },
+    }))
     .pipe(gulp.dest("build/js"));
 });
 
-gulp.task("babel", function () {
-  return gulp.src("source/js/*.js")
-    .pipe(babel())
-    .pipe(gulp.dest("build/js"));
-});
-
-gulp.task("scripts", gulp.series("webpack", "babel"));
-gulp.task("build", gulp.series("clean", "scripts", "copy", "css", "sprite", "html"));
+gulp.task("build", gulp.series("clean", "webpack", "copy", "css", "sprite", "html"));
 gulp.task("start", gulp.series("build", "server"));
