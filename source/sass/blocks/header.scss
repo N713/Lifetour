@@ -32,7 +32,7 @@
 
 .header__phone-link {
   display: flex;
-  min-width: fit-content;
+  min-width: 165px;
   align-items: center;
   text-decoration: none;
   font-weight: bold;
@@ -51,7 +51,7 @@
 }
 
 .header__list {
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .header__list-item {
