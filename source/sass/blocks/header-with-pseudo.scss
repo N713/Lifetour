@@ -1,0 +1,7 @@
+.header-with-pseudo {
+  @include sectionHeaderDesktop;
+}
+
+.header-with-pseudo::after {
+  @include sectionHeaderDesktopPseudo;
+}

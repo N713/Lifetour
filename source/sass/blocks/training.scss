@@ -3,14 +3,6 @@
   margin: 0 auto;
 }
 
-.training h2 {
-  @include sectionHeaderDesktop;
-}
-
-.training h2::after {
-  @include sectionHeaderDesktopPseudo;
-}
-
 .training p {
   width: 826px;
 }

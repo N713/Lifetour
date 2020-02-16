@@ -6,14 +6,6 @@
   padding-top: 50px;
 }
 
-.tours h2 {
-  @include sectionHeaderDesktop;
-}
-
-.tours h2::after {
-  @include sectionHeaderDesktopPseudo;
-}
-
 .tours__wrapper,
 .tours__buttons-wrapper {
   display: flex;
@@ -52,6 +44,7 @@
   padding: 21px;
   position: absolute;
   top: 0;
+  background-color: rgba(0, 0, 0, 0.35);
 }
 
 .tours__list-item-wrapper p {
