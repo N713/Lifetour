@@ -1,4 +1,10 @@
 .training {
+  width: 100%;
+}
+
+.training__wrapper {
+  display: flex;
+  flex-direction: column;
   max-width: $maxWidthDesktop;
   margin: 0 auto;
 }
@@ -8,13 +14,13 @@
 }
 
 .training h3,
-.training__wrapper h3 {
+.training__wrapper-instructors h3 {
   font-weight: bold;
   font-size: 21px;
   color: $mainDark;
 }
 
-.training__wrapper {
+.training__wrapper-instructors {
   display: flex;
   justify-content: space-between;
   padding-right: 20px;
@@ -80,6 +86,10 @@
   &:active {
     opacity: 0.5;
   }
+}
+
+.training__stages-list {
+  padding-bottom: 38px;
 }
 
 .training__stages-list__item {

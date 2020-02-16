@@ -1,0 +1,22 @@
+.about-us {
+  max-width: 1400px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+
+.about-us,
+.about-us__wrapper-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-us__wrapper-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.about-us__wrapper-content img {
+  width: 52%;
+  height: 37.5%;
+}
