@@ -3,8 +3,26 @@
 }
 
 .gallery__wrapper {
+  box-sizing: border-box;
   max-width: $maxWidthDesktop;
   margin: 0 auto;
+  padding: 0 20px;
+  padding-top: 80px;
+  margin-bottom: 43px;
+}
+
+.gallery__wrapper h2,
+.gallery__wrapper-header p {
+  @include reset;
+}
+
+.gallery__wrapper h2 {
+  padding-left: 2px;
+  margin-bottom: 18px;
+}
+
+.gallery__wrapper .header-with-pseudo::after {
+  padding-left: 13px;
 }
 
 .gallery__wrapper-header,
@@ -15,7 +33,12 @@
 }
 
 .gallery__wrapper-header p {
-  width: 697px;
+  width: 700px;
+}
+
+.gallery__buttons-wrapper {
+  position: relative;
+  top: 9px;
 }
 
 .gallery__hashtag {
@@ -36,6 +59,8 @@
   max-width: 1400px;
   margin: 0 auto;
   overflow-x: hidden;
+  position: relative;
+  left: -21px;
 }
 
 .gallery__list {
