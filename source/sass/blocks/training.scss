@@ -5,12 +5,32 @@
 .training__wrapper {
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
   max-width: $maxWidthDesktop;
   margin: 0 auto;
+  padding: 0 20px;
+  padding-top: 22px;
 }
 
-.training p {
+.training__wrapper h2,
+.training__wrapper p,
+.training__wrapper-instructors h3 {
+  @include reset;
+}
+
+.training__wrapper h2 {
+  margin-bottom: 25px;
+}
+
+.training .header-with-pseudo::after {
+  padding-left: 10px;
+}
+
+.training__wrapper p {
+  box-sizing: border-box;
   width: 826px;
+  padding-left: 2px;
+  margin-bottom: 53px;
 }
 
 .training h3,
@@ -23,7 +43,12 @@
 .training__wrapper-instructors {
   display: flex;
   justify-content: space-between;
-  padding-right: 20px;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.training__wrapper-instructors h3 {
+  margin-top: 2px;
 }
 
 .training__instructors-list {
@@ -39,6 +64,7 @@
   box-sizing: border-box;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.09);
   padding: 14px;
+  padding-left: 16px;
   margin-right: 6px;
 }
 
@@ -75,6 +101,7 @@
   width: 25px;
   height: 24px;
   border: 1px solid #9ac2e6;
+  margin-top: 4px;
   background-image: url("../img/icon-black-vk.svg");
   background-position: center center;
   background-repeat: no-repeat;
@@ -88,8 +115,21 @@
   }
 }
 
+.training__process {
+  box-sizing: border-box;
+  padding-top: 60px;
+  max-width: 1200px;
+}
+
+.training__process h3 {
+  @include reset;
+  margin-bottom: 34px;
+}
+
 .training__stages-list {
-  padding-bottom: 38px;
+  box-sizing: border-box;
+  padding-left: 38px;
+  justify-content: flex-start;
 }
 
 .training__stages-list__item {
@@ -99,6 +139,11 @@
   line-height: 23px;
   color: $mainDark;
   position: relative;
+  margin-right: 95px;
+}
+
+.training__stages-list__item:nth-of-type(4n) {
+  margin-right: 0;
 }
 
 .training__stages-list__item::before {
@@ -107,7 +152,7 @@
   position: absolute;
   width: 25px;
   height: 25px;
-  left: -35px;
+  left: -38px;
   background-position: center center;
   background-repeat: no-repeat;
 }
@@ -116,12 +161,28 @@
   background-image: url("../img/icon-map.svg");
 }
 
+.training__stages-list__item--boots {
+  margin-right: 97px;
+}
+
 .training__stages-list__item--boots::before {
   background-image: url("../img/icon-boots.svg");
 }
 
+.training__stages-list__item--pine {
+  width: 179px;
+  margin-right: 100px;
+}
+
 .training__stages-list__item--pine::before {
   background-image: url("../img/icon-pine.svg");
+}
+
+.training__stages-list__item--mount {
+  box-sizing: border-box;
+  width: 200px;
+  position: relative;
+  left: 57px;
 }
 
 .training__stages-list__item--mount::before {
@@ -134,8 +195,8 @@
   position: absolute;
   width: 14px;
   height: 14px;
-  left: -30px;
-  top: 100px;
+  left: -32px;
+  top: 85px;
   background-image: url("../img/icon-blue-dot.svg");
   background-position: center center;
   background-repeat: no-repeat;

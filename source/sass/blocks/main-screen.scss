@@ -4,7 +4,7 @@
   margin: 0 auto;
   color: white;
   padding: 0 20px;
-  padding-top: 146px;
+  padding-top: 137px;
 }
 
 .main-screen h1,
@@ -18,7 +18,8 @@
   font-weight: 800;
   font-size: 45px;
   line-height: 55px;
-  margin-bottom: 11px;
+  margin-bottom: 10px;
+  margin-left: -2px;
 }
 
 .main-screen h1::after {
@@ -46,7 +47,13 @@
 }
 
 .main-screen__button {
-  margin-bottom: 110px;
+  margin-bottom: 107px;
+}
+
+.main-screen__list {
+  position: relative;
+  top: -5px;
+  right: -8px;
 }
 
 @media (max-width: $tabletResolution) {

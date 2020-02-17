@@ -27,7 +27,8 @@
   display: flex;
   width: 100%;
   align-items: center;
-  padding: 0 3%;
+  padding-right: 2px;
+  padding-top: 2px;
 }
 
 .header__phone-link {
@@ -40,6 +41,9 @@
   line-height: 30px;
   color: white;
   padding-left: 15px;
+  position: relative;
+  left: 15px;
+  top: 2px;
 
   &:hover {
     opacity: 0.5;
@@ -55,7 +59,7 @@
 }
 
 .header__list-item {
-  margin: 0 1%;
+  margin: 0 3%;
 }
 
 @media (max-width: $tabletResolution) {
