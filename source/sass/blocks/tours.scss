@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  overflow-x: hidden;
   max-width: $maxWidthDesktop;
   margin: 0 auto;
   padding: 0 20px;
