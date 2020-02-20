@@ -46,6 +46,8 @@
 .footer__navigation-list {
   display: flex;
   justify-content: center;
+  position: relative;
+  top: 2px;
 }
 
 .footer__navigation-list-item {

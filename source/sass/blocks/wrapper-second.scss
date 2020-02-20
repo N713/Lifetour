@@ -1,7 +1,6 @@
 .wrapper-second {
   width: 100%;
   border-bottom: 1px solid $mainBlue;
-  padding-bottom: 22px;
 }
 
 .wrapper-second__inner {
@@ -10,4 +9,10 @@
   background-image: url("../img/cloud-left@1x.png") ,url("../img/tours-clouds-right@1x.png");
   background-position: left center, right -20px top -10px;
   background-repeat: no-repeat, no-repeat;
+}
+
+@media (max-width: $tabletResolution) {
+  .wrapper-second {
+    border-bottom: none;
+  }
 }

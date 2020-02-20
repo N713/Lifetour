@@ -218,14 +218,28 @@
 }
 
 @media (max-width: $tabletResolution) {
+  .tours {
+    padding: 0 113px;
+  }
+
   .tours h2 {
     font-size: 25px;
     line-height: 30px;
+    margin-bottom: 57px;
   }
 
   .tours h2::after {
     font-size: 40px;
     line-height: 49px;
+  }
+
+  .tours__buttons-wrapper {
+    margin-top: 0;
+    margin-right: -2px;
+  }
+
+  .tours__list {
+    margin-bottom: 13px;
   }
 }
 

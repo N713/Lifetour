@@ -2,7 +2,7 @@
   max-width: 1400px;
   padding-right: 20px;
   margin: 0 auto;
-  padding-top: 67px;
+  padding-top: 64px;
   padding-bottom: 73px;
 }
 
@@ -54,4 +54,11 @@
   width: 545px;
   font-size: 14px;
   line-height: 24px;
+}
+
+@media (max-width: $tabletResolution) {
+  .about-us__wrapper-text h2 {
+    font-size: 25px;
+    line-height: 30px;
+  }
 }

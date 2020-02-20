@@ -22,19 +22,6 @@ for (let i = 0; i < SHOWED_CARDS; i++) {
   tours[i].classList.add(`show`);
 }
 
-/*
-const addMoves = () => {
-  nextButton.addEventListener(`click`, () => {
-    toursList.classList.add(`move-right`)
-  });
-
-  prevButton.addEventListener(`click`, () => {
-    toursList.classList.remove(`move-right`);
-  });
-};
-
-*/
-
 const addMovesAtResolution = (resolution) => {
   nextButton.addEventListener(`click`, () => {
     if(window.innerWidth < resolution) {
@@ -92,6 +79,6 @@ const hidePrevTour = () => {
 if(tours.length > SHOWED_CARDS) {
   nextButton.addEventListener(`click`, showNextTour);
   prevButton.addEventListener(`click`, hidePrevTour);
-} else {
+} else if(tours.length <= SHOWED_CARDS){
   addMovesAtResolution(MAX_DESKTOP_WIDTH);
 }
