@@ -268,6 +268,18 @@
 
   .training__instructors-list {
     margin-bottom: 61px;
+    position: relative;
+  }
+
+  .training__instructors-list::after {
+    content: "";
+    display: inline-block;
+    width: 33%;
+    height: 403px;
+    background-color: white;
+    opacity: 0.8;
+    position: absolute;
+    right: -21%;
   }
 
   .training__process {
@@ -430,6 +442,10 @@
 
   .training__instructors-list {
     margin-bottom: 13px;
+  }
+
+  .training__instructors-list::after {
+    right: -19%;
   }
 
   .training__wrapper .training__instructors-list-item p,

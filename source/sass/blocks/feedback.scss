@@ -169,6 +169,21 @@
     position: relative;
     bottom: 12px;
   }
+
+  .feedback__list {
+    position: relative;
+  }
+
+  .feedback__list::after {
+    content: "";
+    display: inline-block;
+    width: 49.5%;
+    height: 495px;
+    position: absolute;
+    background-color: white;
+    opacity: 0.8;
+    right: -1%;
+  }
 }
 
 @media (max-width: $mobileResolution) {
@@ -197,6 +212,10 @@
   .feedback__buttons-wrapper {
     margin-top: 6px;
     margin-right: 1px;
+  }
+
+  .feedback__list::after {
+    right: -41%;
   }
 
   .feedback__list-item,
