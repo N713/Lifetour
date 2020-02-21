@@ -29,6 +29,8 @@
   justify-content: flex-start;
   flex-wrap: nowrap;
   margin-bottom: 31px;
+
+  transition-duration: 1s;
 }
 
 .tours__list-item {
@@ -37,7 +39,7 @@
   margin-right: 21px;
   margin-bottom: 21px;
 
-  transition-duration: 1s;
+  //transition-duration: 1s;
 }
 
 .tours__list-item-wrapper {
@@ -299,6 +301,14 @@
   .tours__list-item {
     margin-bottom: 20px;
     margin-right: 20px;
+  }
+
+  .tours__list-item img {
+    width: 281px;
+  }
+
+  .tours__list-item-inner-list-item img {
+    width: 79px;
   }
 
   .tours__list-item-wrapper p {

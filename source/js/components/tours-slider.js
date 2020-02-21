@@ -1,9 +1,7 @@
 `use strict`;
 
-const NEXT = 1;
-const STEP = 2;
-const SHOWED_CARDS = 3;
-const MAX_DESKTOP_WIDTH = 1096;
+import {utils} from "./utils";
+import {params} from "./utils";
 
 const toursSection = document.body.querySelector(`.tours`);
 const nextButton = toursSection.querySelector(`.button--right`);
@@ -12,38 +10,24 @@ const tours = Array.from(toursSection.querySelectorAll(`.tours__list-item`));
 const toursList = toursSection.querySelector(`.tours__list`);
 
 let currentFirst = 0;
-let currentLast = currentFirst + STEP;
-
-for (let i = SHOWED_CARDS; i < tours.length; i++) {
-  tours[i].classList.add(`hide`);
-}
+let currentLast = currentFirst + params.step;
 
 const addMovesAtResolution = (resolution) => {
-  nextButton.addEventListener(`click`, () => {
-    if(window.innerWidth < resolution) {
-      toursList.classList.add(`move-right`);
-    }
-  });
-
-  prevButton.addEventListener(`click`, () => {
-    if(window.innerWidth < resolution) {
-      toursList.classList.remove(`move-right`);
-    }
-  });
+  utils.addMoveAtResolution(nextButton, toursList, params.max_desktop_width);
+  utils.removeMoveAtResolution(prevButton, toursList, params.max_desktop_width);
 };
 
 const showNextTour = () => {
   prevButton.addEventListener(`click`, hidePrevTour);
 
   tours[currentFirst].classList.add(`hide`);
-  currentFirst += NEXT;
+  currentFirst += params.next;
 
-  tours[currentFirst + NEXT].classList.remove(`hide`);
-  tours[currentFirst + STEP].classList.remove(`hide`);
-
+  tours[currentFirst + params.next].classList.remove(`hide`);
+  tours[currentFirst + params.step].classList.remove(`hide`);
   currentLast += 1;
 
-  if(currentLast === tours.length - NEXT) {
+  if(currentLast === tours.length - params.next) {
     nextButton.removeEventListener(`click`, showNextTour);
     prevButton.addEventListener(`click`, hidePrevTour);
   }
@@ -54,25 +38,24 @@ const hidePrevTour = () => {
 
   if(currentFirst !== 0) {
     tours[currentLast].classList.add(`hide`);
-    currentLast = currentLast - NEXT;
+    currentLast = currentLast - params.next;
 
-    currentFirst = currentFirst - NEXT;
+    currentFirst = currentFirst - params.next;
     tours[currentFirst].classList.remove(`hide`);
   }
 
   if(currentFirst === 0) {
-    prevButton.removeEventListener(`click`, hidePrevTour);
-    nextButton.addEventListener(`click`, showNextTour);
+    utils.unactiveBack(nextButton, showNextTour, prevButton, hidePrevTour);
   }
 };
 
 const addToursHandlers = () => {
-  if(tours.length > SHOWED_CARDS) {
-    nextButton.addEventListener(`click`, showNextTour);
-    prevButton.addEventListener(`click`, hidePrevTour);
-  } else if(tours.length <= SHOWED_CARDS){
-    addMovesAtResolution(MAX_DESKTOP_WIDTH);
+  if(tours.length > params.showed_cards) {
+    utils.addHandlers(nextButton, showNextTour, prevButton, hidePrevTour);
+  } else if(tours.length <= params.showed_cards){
+    addMovesAtResolution(params.max_desktop_width);
   }
 };
 
+utils.addClassToElements(params.showed_cards, tours, `hide`);
 export {addToursHandlers};

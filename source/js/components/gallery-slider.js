@@ -1,77 +1,61 @@
 `use strict`;
 
-const NEXT = 1;
-const STEP = 2;
-const SHOWED_CARDS = 3;
-const MAX_DESKTOP_WIDTH = 1096;
+import {utils} from "./utils";
+import {params} from "./utils";
 
 const gallerySection = document.body.querySelector(`.gallery`);
 const nextButton = gallerySection.querySelector(`.button--right`);
 const prevButton = gallerySection.querySelector(`.button--left`);
-const images = Array.from(gallerySection.querySelectorAll(`.gallery__list`));
+const images = Array.from(gallerySection.querySelectorAll(`.gallery__list-wrapper`));
 const imagesList = gallerySection.querySelector(`.gallery__wrapper-list`);
 
 let currentFirst = 0;
-let currentLast = currentFirst + STEP;
-
-for (let i = SHOWED_CARDS; i < images.length; i++) {
-  images[i].classList.add(`hide`);
-}
+let currentLast = currentFirst + params.step;
 
 const addMovesAtResolution = (resolution) => {
-  nextButton.addEventListener(`click`, () => {
-    if(window.innerWidth < resolution) {
-      imagesList.classList.add(`move-right`);
-    }
-  });
-
-  prevButton.addEventListener(`click`, () => {
-    if(window.innerWidth < resolution) {
-      imagesList.classList.remove(`move-right`);
-    }
-  });
+  utils.addMoveAtResolution(nextButton, imagesList, params.max_desktop_width);
+  utils.removeMoveAtResolution(prevButton, imagesList, params.max_desktop_width);
 };
 
-const showNextTour = () => {
-  prevButton.addEventListener(`click`, hidePrevTour);
+const showNextImage = () => {
+  prevButton.addEventListener(`click`, hidePrevImage);
 
   images[currentFirst].classList.add(`hide`);
-  currentFirst += NEXT;
+  currentFirst += params.next;
 
-  images[currentFirst + NEXT].classList.remove(`hide`);
-  images[currentFirst + STEP].classList.remove(`hide`);
+  images[currentFirst + params.next].classList.remove(`hide`);
+  images[currentFirst + params.step].classList.remove(`hide`);
   currentLast += 1;
 
-  if(currentLast === images.length - NEXT) {
-    nextButton.removeEventListener(`click`, showNextTour);
-    prevButton.addEventListener(`click`, hidePrevTour);
+  if(currentLast === images.length - params.next) {
+    nextButton.removeEventListener(`click`, showNextImage);
+    prevButton.addEventListener(`click`, hidePrevImage);
   }
 };
 
-const hidePrevTour = () => {
-  nextButton.addEventListener(`click`, showNextTour);
+const hidePrevImage = () => {
+  nextButton.addEventListener(`click`, showNextImage);
 
   if(currentFirst !== 0) {
     images[currentLast].classList.add(`hide`);
-    currentLast = currentLast - NEXT;
+    currentLast = currentLast - params.next;
 
-    currentFirst = currentFirst - NEXT;
+    currentFirst = currentFirst - params.next;
     images[currentFirst].classList.remove(`hide`);
   }
 
   if(currentFirst === 0) {
-    prevButton.removeEventListener(`click`, hidePrevTour);
-    nextButton.addEventListener(`click`, showNextTour);
+    utils.unactiveBack(nextButton, showNextImage, prevButton, hidePrevImage);
   }
 };
 
 const addGalleryHandlers = () => {
-  if(images.length > SHOWED_CARDS) {
-    nextButton.addEventListener(`click`, showNextTour);
-    prevButton.addEventListener(`click`, hidePrevTour);
-  } else if(images.length <= SHOWED_CARDS){
-    addMovesAtResolution(MAX_DESKTOP_WIDTH);
+  if(images.length > params.showed_cards) {
+    utils.addHandlers(nextButton, showNextImage, prevButton, hidePrevImage);
+  } else if(images.length <= params.showed_cards){
+    addMovesAtResolution(params.max_desktop_width);
   }
 };
 
+utils.addClassToElements(params.showed_cards, images, `hide`);
 export {addGalleryHandlers};

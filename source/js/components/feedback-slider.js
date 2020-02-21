@@ -1,9 +1,7 @@
 `use strict`;
 
-const NEXT = 1;
-const STEP = 2;
-const SHOWED_CARDS = 3;
-const MAX_DESKTOP_WIDTH = 1096;
+import {utils} from "./utils";
+import {params} from "./utils";
 
 const feedbackSection = document.body.querySelector(`.feedback`);
 const nextButton = feedbackSection.querySelector(`.button--right`);
@@ -12,66 +10,52 @@ const feedbacks = Array.from(feedbackSection.querySelectorAll(`.feedback__list-i
 const feedbackList = feedbackSection.querySelector(`.feedback__list`);
 
 let currentFirst = 0;
-let currentLast = currentFirst + STEP;
-
-for (let i = SHOWED_CARDS; i < feedbacks.length; i++) {
-  feedbacks[i].classList.add(`hide`);
-}
+let currentLast = currentFirst + params.step;
 
 const addMovesAtResolution = (resolution) => {
-  nextButton.addEventListener(`click`, () => {
-    if(window.innerWidth < resolution) {
-      feedbackList.classList.add(`move-right`);
-    }
-  });
-
-  prevButton.addEventListener(`click`, () => {
-    if(window.innerWidth < resolution) {
-      feedbackList.classList.remove(`move-right`);
-    }
-  });
+  utils.addMoveAtResolution(nextButton, feedbackList, params.max_desktop_width);
+  utils.removeMoveAtResolution(prevButton, feedbackList, params.max_desktop_width);
 };
 
-const showNextTour = () => {
-  prevButton.addEventListener(`click`, hidePrevTour);
+const showNextFeedback = () => {
+  prevButton.addEventListener(`click`, hidePrevFeedback);
 
   feedbacks[currentFirst].classList.add(`hide`);
-  currentFirst += NEXT;
+  currentFirst += params.next;
 
-  feedbacks[currentFirst + NEXT].classList.remove(`hide`);
-  feedbacks[currentFirst + STEP].classList.remove(`hide`);
+  feedbacks[currentFirst + params.next].classList.remove(`hide`);
+  feedbacks[currentFirst + params.step].classList.remove(`hide`);
   currentLast += 1;
 
-  if(currentLast === feedbacks.length - NEXT) {
-    nextButton.removeEventListener(`click`, showNextTour);
-    prevButton.addEventListener(`click`, hidePrevTour);
+  if(currentLast === feedbacks.length - params.next) {
+    nextButton.removeEventListener(`click`, showNextFeedback);
+    prevButton.addEventListener(`click`, hidePrevFeedback);
   }
 };
 
-const hidePrevTour = () => {
-  nextButton.addEventListener(`click`, showNextTour);
+const hidePrevFeedback = () => {
+  nextButton.addEventListener(`click`, showNextFeedback);
 
   if(currentFirst !== 0) {
     feedbacks[currentLast].classList.add(`hide`);
-    currentLast = currentLast - NEXT;
+    currentLast = currentLast - params.next;
 
-    currentFirst = currentFirst - NEXT;
+    currentFirst = currentFirst - params.next;
     feedbacks[currentFirst].classList.remove(`hide`);
   }
 
   if(currentFirst === 0) {
-    prevButton.removeEventListener(`click`, hidePrevTour);
-    nextButton.addEventListener(`click`, showNextTour);
+    utils.unactiveBack(nextButton, showNextFeedback, prevButton, hidePrevFeedback);
   }
 };
 
 const addFeedbacksHandlers = () => {
-  if(feedbacks.length > SHOWED_CARDS) {
-    nextButton.addEventListener(`click`, showNextTour);
-    prevButton.addEventListener(`click`, hidePrevTour);
-  } else if(feedbacks.length <= SHOWED_CARDS){
-    addMovesAtResolution(MAX_DESKTOP_WIDTH);
+  if(feedbacks.length > params.showed_cards) {
+    utils.addHandlers(nextButton, showNextFeedback, prevButton, hidePrevFeedback);
+  } else if(feedbacks.length <= params.showed_cards){
+    addMovesAtResolution(params.max_desktop_width);
   }
 };
 
+utils.addClassToElements(params.showed_cards, feedbacks, `hide`);
 export {addFeedbacksHandlers};
