@@ -5,20 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>LIFETOUR</title>
+  <link rel="preload" href="fonts/montserratblack.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/montserratbold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/montserratextrabold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/montserratlight.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/montserratmedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/montserratregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
-  <!-- Pixel Glass -->
-  <style>
-    HTML {
-      background-repeat: no-repeat;
-      background-position:  50% 0;
-      /* По умолчанию показывается мобильный макет */
-      /*background-image: url( "img/Tablet.jpg" );
-      opacity: 0.5;
-    }
-  </style>
-  <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
-  <script src="../node_modules/pixel-glass/script.js"></script>
-  <!-- // Pixel Glass -->
+  <script>
+    document.createElement( "picture" );
+  </script>
+  <script src="js/picturefill.js" async=""></script>
+  <!-- Рекомендация разработчика подключить именно в <head>. http://scottjehl.github.io/picturefill/ -->
+  <title>Smart Device</title>
 </head>
 <body>
   <div class="wrapper">
@@ -98,7 +97,14 @@
         </div>
         <ul class="list tours__list">
           <li class="list__item tours__list-item">
-            <img src="img/elbrus@1x.jpg" width="384" height="412" alt="Эльбрус">
+            <picture>
+              <source type="image/webp"
+                      srcset="img/elbrus@1x.webp 1x, img/elbrus@2x.webp 2x">
+
+              <img src="img/elbrus@1x.jpg"
+                   srcset="img/elbrus@2x.jpg 2x"
+                   width="385" height="412" alt="Эльбрус">
+            </picture>
             <div class="tours__list-item-wrapper">
               <ul class="list tours__list-item-inner-list">
                 <li class="tours__list-item-inner-list-item tours__list-item-inner-list-item--place">Кавказ</li>
@@ -123,7 +129,14 @@
             </div>
           </li>
           <li class="list__item tours__list-item">
-            <img src="img/beluha@1x.jpg" width="384" height="412" alt="Белуха">
+            <picture>
+              <source type="image/webp"
+                      srcset="img/beluha@1x.webp 1x, img/beluha@2x.webp 2x">
+
+              <img src="img/beluha@1x.jpg"
+                   srcset="img/beluha@2x.jpg 2x"
+                   width="384" height="412" alt="Белуха">
+            </picture>
             <div class="tours__list-item-wrapper">
               <ul class="list tours__list-item-inner-list">
                 <li class="tours__list-item-inner-list-item tours__list-item-inner-list-item--place">Алтай</li>
@@ -148,7 +161,14 @@
             </div>
           </li>
           <li class="list__item tours__list-item">
-            <img src="img/fisht@1x.jpg" width="384" height="412" alt="Фишт">
+            <picture>
+              <source type="image/webp"
+                      srcset="img/fisht@1x.webp 1x, img/fisht@2x.webp 2x">
+
+              <img src="img/fisht@1x.jpg"
+                   srcset="img/fisht@2x.jpg 2x"
+                   width="385" height="412" alt="Фишт">
+            </picture>
             <div class="tours__list-item-wrapper">
               <ul class="list tours__list-item-inner-list">
                 <li class="tours__list-item-inner-list-item tours__list-item-inner-list-item--place">Адыгея</li>
@@ -195,7 +215,14 @@
           </div>
           <ul class="list training__instructors-list">
             <li class="list__item training__instructors-list-item">
-              <img src="img/instructor-alex@1x.jpg" width="204" height="212" alt="Александр">
+              <picture>
+                <source type="image/webp"
+                        srcset="img/instructor-alex@1x.webp 1x, img/instructor-alex@2x.webp 2x">
+
+                <img src="img/instructor-alex@1x.jpg"
+                     srcset="img/instructor-alex@2x.jpg 2x"
+                     width="204" height="212" alt="Александр">
+              </picture>
               <div class="training__instructors-list-item-wrapper">
                 <span>Александр Прокофьев</span>
                 <a href="#" class="training__instructors-list-item-link">
@@ -208,7 +235,14 @@
               </p>
             </li>
             <li class="list__item training__instructors-list-item">
-              <img src="img/instructor-svetlana@1x.jpg" width="204" height="212" alt="Светлана">
+              <picture>
+                <source type="image/webp"
+                        srcset="img/instructor-svetlana@1x.webp 1x, img/instructor-svatlana@2x.webp 2x">
+
+                <img src="img/instructor-svetlana@1x.jpg"
+                     srcset="img/instructor-svatlana@2x.jpg 2x"
+                     width="204" height="212" alt="Светлана">
+              </picture>
               <div class="training__instructors-list-item-wrapper">
                 <span>Светлана Афиногенова</span>
                 <a href="#" class="training__instructors-list-item-link">
@@ -221,7 +255,14 @@
               </p>
             </li>
             <li class="list__item training__instructors-list-item">
-              <img src="img/instructor-nadya@1x.jpg" width="204" height="212" alt="Надежда">
+              <picture>
+                <source type="image/webp"
+                        srcset="img/instructor-nadya@1x.webp 1x, img/instructor-nadya@2x.webp 2x">
+
+                <img src="img/instructor-nadya@1x.jpg"
+                     srcset="img/instructor-nadya@2x.jpg"
+                     width="204" height="212" alt="Надежда">
+              </picture>
               <div class="training__instructors-list-item-wrapper">
                 <span>Надежда Колесниченко</span>
                 <a href="#" class="training__instructors-list-item-link">
@@ -234,7 +275,14 @@
               </p>
             </li>
             <li class="list__item training__instructors-list-item">
-              <img src="img/instructor-fedor@1x.jpg" width="204" height="212" alt="Федор">
+              <picture>
+                <source type="image/webp"
+                        srcset="img/instructor-fedor@1x.webp 1x, img/instructor-fedor@2x.webp 2x">
+
+                <img src="img/instructor-fedor@1x.jpg"
+                     srcset="img/instructor-fedor@2x.jpg 2x"
+                     width="204" height="212" alt="Федор">
+              </picture>
               <div class="training__instructors-list-item-wrapper">
                 <span>Федор Кайгородов</span>
                 <a href="#" class="training__instructors-list-item-link">
@@ -247,7 +295,14 @@
               </p>
             </li>
             <li class="list__item training__instructors-list-item">
-              <img src="img/instructor-serg@1x.jpg" width="204" height="212" alt="Сергей">
+              <picture>
+                <source type="image/webp"
+                        srcset="img/instructor-serg@1x.webp 1x, img/instructor-serg@2x.webp 2x">
+
+                <img src="img/instructor-serg@1x.jpg"
+                     srcset="img/instructor-serg@2x.jpg 2x"
+                     width="204" height="212" alt="Сергей">
+              </picture>
               <div class="training__instructors-list-item-wrapper">
                 <span>Сергей Денисов</span>
                 <a href="#" class="training__instructors-list-item-link">
@@ -275,8 +330,10 @@
   </div>
   <section class="about-us">
     <div class="about-us__wrapper-content">
-      <img src="img/about-us-img@1x.png" width="721" height="524">
-        <div class="about-us__wrapper-text">
+      <img src="img/about-us-img@1x.png"
+           srcset="img/about-us-img@2x.png 2x"
+           width="721" height="524" alt="Группа в походе">
+      <div class="about-us__wrapper-text">
           <h2 data-name="О нас" class="header-with-pseudo">О нас</h2>
           <div class="about-us__wrapper">
             <h3>История компании</h3>
@@ -314,7 +371,14 @@
     <ul class="list feedback__list">
       <li class="list__item feedback__list-item">
         <div class="feedback__list-item-wrapper">
-          <img src="img/feedback-alex@1x.jpg" width="97" height="100" alt="александр">
+          <picture>
+            <source type="image/webp"
+                    srcset="img/feedback-alex@1x.webp 1x, img/feedback-alex@2x.webp 2x">
+
+            <img src="img/feedback-alex@1x.jpg"
+                 srcset="img/feedback-alex@2x.jpg 2x"
+                 width="97" height="100" alt="Александр">
+          </picture>
           <div class="feedback__list-item-span-wrapper">
             <span>Фролов Александр</span>
             <span>28 лет, Москва</span>
@@ -333,7 +397,14 @@
       </li>
       <li class="list__item feedback__list-item">
         <div class="feedback__list-item-wrapper">
-          <img src="img/fedback-svetlana@1x.jpg" width="97" height="100" alt="Светлана">
+          <picture>
+            <source type="image/webp"
+                    srcset="img/feedback-svetlana@1x.webp 1x, img/feedback-svetlana@2x.webp 2x">
+
+            <img src="img/feedback-svetlana@1x.jpg"
+                 srcset="img/feedback-svetlana@2x.jpg 2x"
+                 width="97" height="100" alt="Светлана">
+          </picture>
           <div class="feedback__list-item-span-wrapper">
             <span>Светлана Олейник</span>
             <span>25 лет, Владивосток</span>
@@ -352,7 +423,14 @@
       </li>
       <li class="list__item feedback__list-item">
         <div class="feedback__list-item-wrapper">
-          <img src="img/feedback-eugenya@1x.jpg" width="97" height="100" alt="Евгения">
+          <picture>
+            <source type="image/webp"
+                    srcset="img/feedback-eugenya@1x.webp 1x, img/feedback-eugenya@2x.webp 2x">
+
+            <img src="img/feedback-eugenya@1x.jpg"
+                 srcset="img/feedback-eugenya@2x.jpg 2x"
+                 width="97" height="100" alt="Евгения">
+          </picture>
           <div class="feedback__list-item-span-wrapper">
             <span>Евгения Баженова</span>
             <span>23 года, Кострома</span>
@@ -392,29 +470,95 @@
     <div class="gallery__wrapper-list">
       <ul class="list gallery__list">
         <li class="list__item gallery__list-item">
-          <img src="img/gallery-1@1x.jpg" width="275" height="449" alt="Изображение">
+          <picture>
+            <source type="image/webp"
+                    srcset="img/gallery-1@1x.webp 1x, img/gallery-1@2x.webp 2x">
+
+            <img src="img/gallery-1@1x.jpg"
+                 srcset="img/gallery-1@2x.jpg 2x"
+                 width="275" height="452" alt="Изображение">
+          </picture>
         </li>
         <li class="list__item gallery__list-item">
-          <img src="img/gallery-2@1x.jpg" width="298" height="179" alt="Изображение">
-          <img src="img/gallery-3@1x.jpg" width="298" height="265" alt="Изображение">
+          <picture>
+            <source type="image/webp"
+                    srcset="img/gallery-2@1x.webp 1x, img/gallery-2@2x.webp 2x">
+
+            <img src="img/gallery-2@1x.jpg"
+                 srcset="img/gallery-2@2x.jpg 2x"
+                 width="298" height="179" alt="Изображение">
+          </picture>
+
+          <picture>
+            <source type="image/webp"
+                    srcset="img/gallery-3@1x.webp 1x, img/gallery-3@2x.webp 2x">
+
+            <img src="img/gallery-3@1x.jpg"
+                 srcset="img/gallery-3@2x.jpg 2x"
+                 width="298" height="265" alt="Изображение">
+          </picture>
         </li>
       </ul>
       <ul class="list gallery__list">
         <li class="list__item gallery__list-item">
-          <img src="img/gallery-4@1x.jpg" width="273" height="449" alt="Изображение">
+          <picture>
+            <source type="image/webp"
+                    srcset="img/gallery-4@1x.webp 1x, img/gallery-4@2x.webp 2x">
+
+            <img src="img/gallery-4@1x.jpg"
+                 srcset="img/gallery-4@2x.jpg 2x"
+                 width="275" height="452" alt="Изображение">
+          </picture>
         </li>
         <li class="list__item gallery__list-item">
-          <img src="img/gallery-5@1x.jpg" width="298" height="179" alt="Изображение">
-          <img src="img/gallery-6@1x.jpg" width="298" height="265" alt="Изображение">
+          <picture>
+            <source type="image/webp"
+                    srcset="img/gallery-5@1x.webp 1x, img/gallery-5@2x.webp 2x">
+
+            <img src="img/gallery-5@1x.jpg"
+                 srcset="img/gallery-5@2x.jpg 2x"
+                 width="298" height="179" alt="Изображение">
+          </picture>
+
+          <picture>
+            <source type="image/webp"
+                    srcset="img/gallery-6@1x.webp 1x, img/gallery-6@2x.webp 2x">
+
+            <img src="img/gallery-6@1x.jpg"
+                 srcset="img/gallery-6@2x.jpg 2x"
+                 width="298" height="265" alt="Изображение">
+          </picture>
         </li>
       </ul>
       <ul class="list gallery__list">
         <li class="list__item gallery__list-item">
-          <img src="img/gallery-7@1x.jpg" width="276" height="448" alt="Изображение">
+          <picture>
+            <source type="image/webp"
+                    srcset="img/gallery-7@1x.webp 1x, img/gallery-7@2x.webp 2x">
+
+            <img src="img/gallery-7@1x.jpg"
+                 srcset="img/gallery-7@2x.jpg 2x"
+                 width="276" height="452" alt="Изображение">
+          </picture>
         </li>
         <li class="list__item gallery__list-item">
-          <img src="img/gallery-2@1x.jpg" width="298" height="179" alt="Изображение">
-          <img src="img/gallery-3@1x.jpg" width="298" height="265" alt="Изображение">
+          <picture>
+            <source type="image/webp"
+                    srcset="img/gallery-2@1x.webp 1x, img/gallery-2@2x.webp 2x">
+
+            <img src="img/gallery-2@1x.jpg"
+                 srcset="img/gallery-2@2x.jpg 2x"
+                 width="298" height="179" alt="Изображение">
+          </picture>
+
+          <picture>
+            <source type="image/webp"
+                    srcset="img/gallery-3@1x.webp 1x, img/gallery-3@2x.webp 2x">
+
+            <img src="img/gallery-3@1x.jpg"
+                 srcset="img/gallery-3@2x.jpg 2x"
+                 width="298" height="265" alt="Изображение">
+          </picture>
         </li>
       </ul>
     </div>
@@ -480,6 +624,7 @@
     </ul>
     <a href="#" class="footer__policy-link">Политика конфиденциальности</a>
   </footer>
+  <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

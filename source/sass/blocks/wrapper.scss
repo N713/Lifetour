@@ -5,6 +5,10 @@
   background-size: auto, cover;
   background-position: left 50% top -20px, left -18px top 5px;
   padding-bottom: 180px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/lines.svg"), url("../img/main-back@2x.jpg");;
+  }
 }
 
 @media (max-width: $tabletResolution) {
@@ -20,5 +24,9 @@
     background-image: none, url("../img/main-back@1x.jpg");
     background-position: center, left 63% top;
     padding-bottom: 50px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: none, url("../img/main-back@2x.jpg");
+    }
   }
 }

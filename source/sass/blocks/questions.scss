@@ -7,6 +7,10 @@
   background-size: cover;
   padding-top: 315px;
   padding-bottom: 283px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/form-background@2x.jpg");
+  }
 }
 
 .questions__wrapper {

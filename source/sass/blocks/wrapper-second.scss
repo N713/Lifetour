@@ -9,6 +9,10 @@
   background-image: url("../img/cloud-left@1x.png") ,url("../img/tours-clouds-right@1x.png");
   background-position: left center, right -20px top -10px;
   background-repeat: no-repeat, no-repeat;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/cloud-left@2x.png"), url("../img/tours-clouds-right@2x.png");
+  }
 }
 
 @media (max-width: $tabletResolution) {
