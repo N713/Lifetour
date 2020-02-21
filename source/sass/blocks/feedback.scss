@@ -38,9 +38,11 @@
 }
 
 .feedback__list-item {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
   box-sizing: border-box;
-  max-width: 389px;
+  width: 389px;
   margin-right: 15px;
   margin-bottom: 15px;
   padding: 36px;
@@ -136,4 +138,105 @@
 
 .feedback__list-item-span-wrapper span:first-of-type {
   font-weight: bold;
+}
+
+@media (max-width: $tabletResolution) {
+  .feedback {
+    padding: 0 111px;
+  }
+
+  .feedback__wrapper {
+    padding-right: 182px;
+    margin-bottom: 42px;
+  }
+
+  .feedback__wrapper h2 {
+    font-size: 25px;
+    line-height: 30px;
+    bottom: 0;
+  }
+
+  .feedback__wrapper h2::after {
+    font-size: 40px;
+    line-height: 49px;
+  }
+
+  .feedback__wrapper .header-with-pseudo::after {
+    bottom: 13px;
+  }
+
+  .feedback__buttons-wrapper {
+    position: relative;
+    bottom: 12px;
+  }
+}
+
+@media (max-width: $mobileResolution) {
+  .feedback {
+    padding: 0 20px;
+    padding-top: 32px;
+  }
+
+  .feedback__wrapper {
+    padding-right: 0;
+    margin-bottom: 0;
+  }
+
+  .feedback__wrapper h2 {
+    font-size: 22px;
+    line-height: 27px;
+    margin-top: 0;
+    margin-bottom: 33px;
+  }
+
+  .feedback__wrapper h2::after {
+    font-size: 30px;
+    line-height: 37px;
+  }
+
+  .feedback__buttons-wrapper {
+    margin-top: 6px;
+    margin-right: 1px;
+  }
+
+  .feedback__list-item,
+  .feedback__list-item:nth-of-type(2n),
+  .feedback__list-item:nth-of-type(3n) {
+    width: 278px;
+    min-height: 535px;
+    padding-top: 45px;
+    padding-bottom: 28px;
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+
+  .feedback__list-item:nth-of-type(2n),
+  .feedback__list-item:nth-of-type(3n) {
+    padding-top: 41px;
+  }
+
+  .feedback__list-item:nth-of-type(3n) {
+    padding-top: 37px;
+  }
+
+  .feedback__list-item:nth-of-type(3n) .feedback__list-item-wrapper {
+    margin-bottom: 22px;
+  }
+
+  .feedback__list-item:first-of-type {
+    padding-right: 10px;
+  }
+
+  .feedback__list-item-wrapper {
+    margin-bottom: 18px;
+  };
+
+  .feedback__list-item-span-wrapper {
+    margin-left: 7.5px;
+  }
+
+  .feedback__list-item p,
+  .feedback__list-item:first-of-type p{
+    width: 250px;
+  }
 }

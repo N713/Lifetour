@@ -102,13 +102,30 @@
     padding: 13px 20px;
   }
 
-  .header img {
+  .header__burger {
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-top: 22px;
+  }
+
+  .header__logo-link,
+  .header__logo-img {
     width: 108px;
     height: 30px;
+  }
+
+  .header__logo-link {
+    position: relative;
+    left: 227px;
+    top: -5px;
   }
 
   .header__phone-link {
     font-size: 14px;
     line-height: 22px;
+    padding-left: 0;
+    position: relative;
+    top: 27px;
+    left: 37px;
   }
 }

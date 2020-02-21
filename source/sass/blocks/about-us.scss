@@ -57,8 +57,123 @@
 }
 
 @media (max-width: $tabletResolution) {
+  .about-us {
+    padding-bottom: 21px;
+  }
+
+  .about-us__wrapper {
+    margin-bottom: 76px;
+  }
+
+  .about-us__wrapper:first-of-type p {
+    width: 278px;
+  }
+
+  .about-us__wrapper:first-of-type p:last-of-type {
+    margin-top: -5px;
+  }
+
+  .about-us__wrapper:last-of-type {
+    position: relative;
+    left: -269px;
+  }
+
+  .about-us__wrapper:last-of-type h3 {
+    margin-bottom: 12px;
+  }
+
+  .about-us__wrapper:last-of-type p {
+    width: 540px;
+  }
+
+  .about-us__wrapper-text {
+    padding-top: 18px;
+    padding-left: 9px;
+    position: relative;
+    left: -187px;
+  }
+
   .about-us__wrapper-text h2 {
     font-size: 25px;
     line-height: 30px;
+    margin-bottom: 42px;
+  }
+
+  .about-us__wrapper h3 {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 22px;
+  }
+
+  .about-us__wrapper-text h2::after {
+    font-size: 40px;
+    line-height: 49px;
+  }
+
+  .about-us__wrapper-content img {
+    width: 77%;
+    position: relative;
+    left: -32.4%;
+    top: -60px;
+  }
+}
+
+@media (max-width: $mobileResolution) {
+  .about-us,
+  .about-us__wrapper-content,
+  .about-us__wrapper-text {
+    flex-direction: column;
+  }
+
+  .about-us {
+    padding-bottom: 0;
+  }
+
+  .about-us__wrapper {
+    margin-bottom: 40px;
+  }
+
+  .about-us__wrapper:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .about-us__wrapper:last-of-type h3 {
+    margin-bottom: 18px;
+  }
+
+  .about-us__wrapper:first-of-type p,
+  .about-us__wrapper:last-of-type p {
+    //width: 280px;
+    width: auto;
+  }
+
+  .about-us__wrapper:last-of-type {
+    left: 0;
+    position: static;
+  }
+
+  .about-us__wrapper-content img {
+    width: 194%;
+    left: -78.1%;
+    top: -212px;
+  }
+
+  .about-us__wrapper-text {
+    left: 0;
+    position: static;
+    padding-top: 0;
+    padding-left: 20px;
+    margin-top: -151px;
+  }
+
+  .about-us__wrapper-text h2 {
+    font-size: 22px;
+    line-height: 27px;
+    margin-bottom: 45px;
+  }
+
+  .about-us__wrapper-text h2::after {
+    font-size: 30px;
+    line-height: 37px;
   }
 }

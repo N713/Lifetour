@@ -37,6 +37,10 @@
   margin-bottom: 53px;
 }
 
+.training__wrapper p br {
+  display: none;
+}
+
 .training h3,
 .training__wrapper-instructors h3 {
   font-weight: bold;
@@ -311,6 +315,9 @@
 
   .training__stages-list__item--map {
     order: 1;
+
+    position: relative;
+    left: 2px;
   }
 
   .training__stages-list__item--boots {
@@ -334,7 +341,7 @@
     order: 3;
 
     position: relative;
-    left: 0;
+    left: 2px;
     top: 2px;
   }
 
@@ -363,10 +370,126 @@
 
   .training__stages-list__item--mount::before {
     top: -3px;
+    left: -36px;
   }
 
   .training__stages-list__item--mount::after {
     top: -29px;
     left: 66px;
+  }
+}
+
+@media (max-width: $mobileResolution) {
+  .training__wrapper {
+    padding: 0 20px;
+    padding-top: 25px;
+  }
+
+  .training__wrapper h2 {
+    font-size: 22px;
+    line-height: 27px;
+    margin-bottom: 20px;
+  }
+
+  .training__wrapper h3 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .training__wrapper h2::after {
+    font-size: 30px;
+    line-height: 37px;
+  }
+
+  .training__wrapper p,
+  .training__wrapper p:first-of-type {
+    width: 280px;
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 48px;
+  }
+
+  .training__wrapper p br {
+    display: block;
+  }
+
+  .training__wrapper-instructors {
+    margin-bottom: 31px;
+  }
+
+  .training__wrapper-instructors h3 {
+    font-size: 16px;
+    line-height: 20px;
+    margin-left: 0;
+  }
+
+  .training__buttons-wrapper {
+    top: 3px;
+    right: 1px;
+  }
+
+  .training__instructors-list {
+    margin-bottom: 13px;
+  }
+
+  .training__wrapper .training__instructors-list-item p,
+  .training__wrapper .training__instructors-list-item p:first-of-type {
+    width: auto;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .training__process {
+    padding-top: 45px;
+  }
+
+  .training__stages-list {
+    flex-direction: column;
+  }
+
+  .training__stages-list::after {
+    width: 1px;
+    height: 212px;
+    top: 15px;
+    left: 26px;
+  }
+
+  .training__stages-list__item--map {
+    left: 61px;
+  }
+
+  .training__stages-list__item--map::after {
+    top: 4px;
+    left: -76px;
+  }
+
+  .training__stages-list__item--boots {
+    left: 60px;
+    top: -27px;
+  }
+
+  .training__stages-list__item--boots::after {
+    top: 5px;
+    left: -75px;
+  }
+
+  .training__stages-list__item--pine {
+    right: -61px;
+    top: -57px;
+  }
+
+  .training__stages-list__item--pine::after {
+    top: 4px;
+    left: -76px;
+  }
+
+  .training__stages-list__item--mount {
+    left: 59px;
+    top: -51px;
+  }
+
+  .training__stages-list__item--mount::after {
+    top: 4px;
+    left: -74px;
   }
 }

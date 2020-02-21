@@ -234,8 +234,10 @@
   }
 
   .tours__buttons-wrapper {
-    margin-top: 0;
     margin-right: -2px;
+    margin-top: 0;
+    position: relative;
+    top: 2px;
   }
 
   .tours__list {
@@ -275,5 +277,92 @@
 
   .tours__list-item-inner-list-item--nights {
     margin-bottom: 20px;
+  }
+}
+
+@media (max-width: $mobileResolution) {
+  .tours {
+    padding: 0 20px;
+  }
+
+  .tours__wrapper h2 {
+    margin-bottom: 22px;
+  }
+
+  .tours__buttons-wrapper {
+    margin-right: 0;
+    padding-top: 11px;
+  }
+
+  .tours__list-item {
+    margin-bottom: 20px;
+    margin-right: 20px;
+  }
+
+  .tours__list-item-wrapper p {
+    padding-top: 18px;
+    margin-bottom: 21px;
+  }
+
+  .tours__list-item-wrapper p::after {
+    bottom: -4px;
+  }
+
+  .tours__list-item-inner-list {
+    margin-bottom: 5px;
+  }
+
+  .tours__list-item-inner-list-item {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .tours__list-item-inner-list-item--place {
+    order: 1;
+
+    font-size: 14px;
+    line-height: 17px;
+    height: 29px;
+  }
+
+  .tours__list-item-inner-list-item--nights {
+    order: 2;
+
+    position: relative;
+    left: -44px;
+    top: -34px;
+  }
+
+  .tours__list-item:first-child .tours__list-item-inner-list-item--nights {
+    left: -44px;
+  }
+
+  .tours__list-item-inner-list-item--days {
+    order: 3;
+
+    top: -5px;
+    right: -1px;
+    margin-right: 0;
+  }
+
+  .tours__list-item-wrapper {
+    padding: 8px;
+  }
+
+  .tours__list {
+    margin-bottom: 0;
+  }
+
+  .tours__list-item-inner-list:last-of-type {
+    padding-bottom: 13px;
+  }
+
+  .tours__list-item-inner-list:last-of-type .tours__list-item-inner-list-item:first-of-type {
+    margin-right: 20px;
+  }
+
+  .tours__list-item-inner-list:last-of-type .tours__list-item-inner-list-item:nth-of-type(2n) {
+    margin-right: 16px;
   }
 }
