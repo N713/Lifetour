@@ -38,6 +38,7 @@
 }
 
 .feedback__list-item {
+  box-sizing: border-box;
   max-width: 389px;
   flex-shrink: 0;
   min-height: 504px;

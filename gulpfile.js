@@ -17,6 +17,7 @@ var include = require("posthtml-include");
 var del = require("del");
 var webpack = require('webpack-stream');
 var babel = require('gulp-babel');
+var concat = require('gulp-concat');
 
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
@@ -43,7 +44,7 @@ gulp.task("server", function () {
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
   gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
-  gulp.watch("source/js/**/*.js", gulp.series("webpack", "refresh"));
+  gulp.watch("source/js/**/*.js", gulp.series("concat", "webpack", "refresh"));
 });
 
 gulp.task("refresh", function (done) {
@@ -122,5 +123,11 @@ gulp.task("webpack", function() {
     .pipe(gulp.dest("build/js"));
 });
 
-gulp.task("build", gulp.series("clean", "webpack", "copy", "css", "sprite", "html"));
+gulp.task("concat", function() {
+  return gulp.src("source/js/libs/*.js")
+    .pipe(concat("vendor.js"))
+    .pipe(gulp.dest("build/js"));
+});
+
+gulp.task("build", gulp.series("clean", "concat", "webpack", "copy", "css", "sprite", "html"));
 gulp.task("start", gulp.series("build", "server"));
