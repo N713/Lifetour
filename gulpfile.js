@@ -111,7 +111,7 @@ gulp.task("webpack", function() {
         rules: [
           {
             test: /\.(js)$/,
-            exclude: /(node_modules)/,
+            exclude: [/node_modules\/(?!(swiper|dom7)\/).*/],
             loader: "babel-loader",
             query: {
               presets: ["@babel/preset-env"]

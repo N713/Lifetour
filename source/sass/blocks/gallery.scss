@@ -164,18 +164,20 @@
     margin-right: 3px;
   }
 
-  .gallery__list .gallery__list-item:first-child img {
+  .gallery__list .gallery__list-item:first-of-type img {
     width: 158.5px;
     height: 259px;
   }
 
-  .gallery__list .gallery__list-item:last-child img:first-of-type {
+  .gallery__list .gallery__list-item:last-of-type .gallery__list-image-first {
     width: 158px;
     height: 103px;
   }
 
-  .gallery__list .gallery__list-item:last-child img {
+  .gallery__list .gallery__list-item:last-of-type .gallery__list-image-second {
     width: 158px;
     height: 153px;
+    position: relative;
+    top: -5px;
   }
 }

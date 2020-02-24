@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  overflow-x: hidden;
   max-width: $maxWidthDesktop;
   margin: 0 auto;
   padding: 0 20px;
@@ -38,8 +37,6 @@
   color: white;
   margin-right: 21px;
   margin-bottom: 21px;
-
-  //transition-duration: 1s;
 }
 
 .tours__list-item-wrapper {
@@ -50,6 +47,7 @@
   width: 384px;
   min-height: 412px;
   padding: 21px;
+  padding-top: 206px;
   position: absolute;
   top: 0;
   background-color: rgba(0, 0, 0, 0.35);
