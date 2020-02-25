@@ -178,15 +178,17 @@
     position: relative;
   }
 
-  .feedback__list::after {
+  .feedback__wrapper::after {
     content: "";
     display: inline-block;
-    width: 49.5%;
+    width: 39.5%;
     height: 495px;
+    margin-top: 60px;
     position: absolute;
     background-color: white;
     opacity: 0.8;
-    right: -1%;
+    right: 0;
+    z-index: 1;
   }
 }
 
@@ -199,6 +201,10 @@
   .feedback__wrapper {
     padding-right: 0;
     margin-bottom: 0;
+  }
+
+  .feedback__wrapper::after {
+    height: 545px;
   }
 
   .feedback__wrapper h2 {
@@ -218,15 +224,11 @@
     margin-right: 1px;
   }
 
-  .feedback__list::after {
-    right: -41%;
-  }
-
   .feedback__list-item,
   .feedback__list-item:nth-of-type(2n),
   .feedback__list-item:nth-of-type(3n) {
     width: 278px;
-    min-height: 535px;
+    min-height: 545px;
     padding-top: 45px;
     padding-bottom: 28px;
     padding-left: 13px;

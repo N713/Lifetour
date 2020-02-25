@@ -224,6 +224,19 @@
     padding-top: 50px;
   }
 
+  .training__wrapper::after {
+    content: "";
+    display: inline-block;
+    width: 39.2%;
+    height: 390px;
+    margin-top: 290px;
+    position: absolute;
+    background-color: white;
+    opacity: 0.8;
+    right: 0;
+    z-index: 1;
+  }
+
   .training__wrapper h2 {
     font-size: 25px;
     line-height: 30px;
@@ -394,6 +407,12 @@
   .training__wrapper {
     padding: 0 20px;
     padding-top: 25px;
+  }
+
+  .training__wrapper::after {
+    width: 48%;
+    margin-top: 315px;
+    height: 440px;
   }
 
   .training__wrapper h2 {

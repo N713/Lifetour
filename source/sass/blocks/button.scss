@@ -31,8 +31,11 @@
 
 .button--left,
 .button--right {
-  width: 37px;
-  height: 35px;
+  box-sizing: border-box;
+  min-width: 37px;
+  min-height: 35px;
+  max-width: 37px;
+  max-height: 35px;
   padding: 5px;
   margin: 0;
   margin-left: 4px;
