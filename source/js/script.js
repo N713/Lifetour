@@ -6,4 +6,6 @@ const mySwiper = new Swiper ('.swiper-container', {
     prevEl: '.swiper-button-prev',
   },
   speed: 600,
+  updateOnWindowResize: true,
+  setWrapperSize: true,
 });
