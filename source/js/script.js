@@ -1,11 +1,3 @@
-import Swiper from "swiper";
-
-const mySwiper = new Swiper ('.swiper-container', {
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  speed: 600,
-  updateOnWindowResize: true,
-  setWrapperSize: true,
-});
+import {swipers} from "./components/rest-sliders";
+import {instructorsSwiper} from "./components/instructors-slider";
+import {gallerySwiper} from "./components/gallery-slider";

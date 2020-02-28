@@ -5,13 +5,17 @@
 
 .wrapper-second__inner {
   margin: 0 auto;
-  max-width: 1400px;
+  width: 100%;
   background-image: url("../img/cloud-left@1x.png") ,url("../img/tours-clouds-right@1x.png");
-  background-position: left center, right -20px top -10px;
+  background-position: left center, right top -10px;
   background-repeat: no-repeat, no-repeat;
+  background-size: auto, auto;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/cloud-left@2x.png"), url("../img/tours-clouds-right@2x.png");
+    background-position: left center, right top -10px;
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto, 500px 1000px;
   }
 }
 

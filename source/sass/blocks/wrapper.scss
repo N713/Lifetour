@@ -9,6 +9,8 @@
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/lines.svg"), url("../img/main-back@2x.jpg");;
   }
+
+  min-height: 46.5vw;
 }
 
 @media (max-width: $tabletResolution) {

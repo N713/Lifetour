@@ -63,18 +63,16 @@
 }
 
 .gallery__wrapper-list {
-  max-width: 1755px;
+  justify-content: flex-start;
   margin: 0 auto;
   position: relative;
   left: -21px;
 }
 
 .gallery__list {
-  width: 579px;
-  max-width: 579px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: nowrap;
   margin-right: 6px;
 }
@@ -86,6 +84,7 @@
 }
 
 .gallery__list-wrapper {
+  min-width: 579px;
   max-width: 579px;
   margin-right: 6px;
 }
@@ -166,6 +165,7 @@
 
   .gallery__list,
   .gallery__list-wrapper {
+    min-width: 320px;
     max-width: 320px;
     height: 259px;
   }

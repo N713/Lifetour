@@ -39,6 +39,7 @@
 
 .feedback__list-item {
   box-sizing: border-box;
+  min-width: 389px;
   max-width: 389px;
   flex-shrink: 0;
   min-height: 504px;
@@ -227,7 +228,7 @@
   .feedback__list-item,
   .feedback__list-item:nth-of-type(2n),
   .feedback__list-item:nth-of-type(3n) {
-    width: 278px;
+    min-width: 278px;
     min-height: 545px;
     padding-top: 45px;
     padding-bottom: 28px;
