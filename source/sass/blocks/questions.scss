@@ -11,6 +11,8 @@
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/form-background@2x.jpg");
   }
+
+  overflow-x: hidden;
 }
 
 .questions__wrapper {

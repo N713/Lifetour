@@ -1,6 +1,7 @@
 .feedback {
   width: 100%;
-  padding: 0 20px;
+  //padding: 0 20px;
+  overflow-x: hidden;
 }
 
 .feedback__wrapper,
@@ -35,6 +36,7 @@
   justify-content: flex-start;
   flex-wrap: nowrap;
   align-items: flex-start;
+  overflow-x: hidden;
 }
 
 .feedback__list-item {
@@ -144,7 +146,7 @@
 
 @media (max-width: $tabletResolution) {
   .feedback {
-    padding: 0 111px;
+    //padding: 0 111px;
   }
 
   .feedback__wrapper {
@@ -192,7 +194,6 @@
 
 @media (max-width: $mobileResolution) {
   .feedback {
-    padding: 0 20px;
     padding-top: 32px;
   }
 
