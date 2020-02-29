@@ -1,0 +1,260 @@
+.stages {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  max-width: 1310px;
+  margin: 0 auto;
+  padding: 0 60px;
+  padding-top: 34px;
+}
+
+.stages h3 {
+  @include reset;
+  margin-bottom: 34px;
+}
+
+.stages__list {
+  box-sizing: border-box;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  padding-left: 35px;
+}
+
+.stages__list-item {
+  display: flex;
+  box-sizing: border-box;
+  width: 225px;
+  min-height: 92px;
+  font-size: 16px;
+  line-height: 23px;
+  color: $mainDark;
+  position: relative;
+  margin-right: 8.2%;
+}
+
+.stages__list-item:nth-of-type(4n) {
+  margin-right: 0;
+}
+
+.stages__list-item::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  left: -38px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.stages__list-item--map::before {
+  background-image: url("../img/icon-map.svg");
+}
+
+.stages__list-item--boots {
+  margin-right: 8.5%;
+}
+
+.stages__list-item--boots::before {
+  background-image: url("../img/icon-boots.svg");
+}
+
+.stages__list-item--pine {
+  width: 179px;
+  margin-right: 8.5%;
+}
+
+.stages__list-item--pine::before {
+  background-image: url("../img/icon-pine.svg");
+}
+
+.stages__list-item--mount {
+  box-sizing: border-box;
+  width: 200px;
+  position: relative;
+  left: 57px;
+}
+
+.stages__list-item--mount::before {
+  background-image: url("../img/icon-mountain.svg");
+  top: -2px;
+}
+
+.stages__list-item::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  left: -32px;
+  bottom: -5px;
+  background-image: url("../img/icon-blue-dot.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: $tabletResolution) {
+  .training {
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .training h3 {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 51px;
+  }
+
+  .stages__list {
+    box-sizing: border-box;
+    min-height: 284px;
+    width: 546px;
+    margin: 0 auto;
+    align-content: space-between;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .stages__list::after {
+    content: "";
+    display: flex;
+    box-sizing: border-box;
+    width: 310px;
+    height: 99px;
+    border: 1px solid $mainBlue;
+    border-left: none;
+    position: absolute;
+    top: 72px;
+    left: 118px;
+  }
+
+  .stages__list-item {
+    margin-right: 0;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .stages__list-item--map {
+    order: 1;
+
+    position: relative;
+    left: 2px;
+  }
+
+  .stages__list-item--boots {
+    order: 2;
+
+    position: relative;
+    left: 28px;
+    top: -2px;
+  }
+
+  .stages__list-item--pine {
+    order: 4;
+
+    width: 155px;
+    position: relative;
+    right: 42px;
+    top: 2px;
+  }
+
+  .stages__list-item--mount {
+    order: 3;
+
+    position: relative;
+    left: 2px;
+    top: 2px;
+  }
+
+  .stages__list-item::after {
+    top: 65px;
+    left: 65px;
+  }
+
+  .stages__list-item--map::before {
+    top: -7px;
+  }
+
+  .stages__list-item--boots::after {
+    top: 67px;
+    left: 72px;
+  }
+
+  .stages__list-item--pine::before {
+    top: -2px;
+  }
+
+  .stages__list-item--pine::after {
+    top: -29px;
+    left: 72px;
+  }
+
+  .stages__list-item--mount::before {
+    top: -3px;
+    left: -36px;
+  }
+
+  .stages__list-item--mount::after {
+    top: -29px;
+    left: 66px;
+  }
+}
+
+@media (max-width: $mobileResolution) {
+  .stages {
+    padding-top: 45px;
+  }
+
+  .stages__list {
+    flex-direction: column;
+  }
+
+  .stages__list::after {
+    width: 1px;
+    height: 212px;
+    top: 15px;
+    left: 26px;
+  }
+
+  .stages__list-item--map {
+    left: 61px;
+  }
+
+  .stages__list-item--map::after {
+    top: 4px;
+    left: -76px;
+  }
+
+  .stages__list-item--boots {
+    left: 60px;
+    top: -27px;
+  }
+
+  .stages__list-item--boots::after {
+    top: 5px;
+    left: -75px;
+  }
+
+  .stages__list-item--pine {
+    right: -61px;
+    top: -57px;
+  }
+
+  .stages__list-item--pine::after {
+    top: 4px;
+    left: -76px;
+  }
+
+  .stages__list-item--mount {
+    left: 59px;
+    top: -51px;
+  }
+
+  .stages__list-item--mount::after {
+    top: 4px;
+    left: -74px;
+  }
+}

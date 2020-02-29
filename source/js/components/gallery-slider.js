@@ -10,6 +10,7 @@ let gallerySwiper = new Swiper ('.swiper-container-s3', {
   slidesPerView: 2,
   slidesPerGroup: 2,
   setWrapperSize: true,
+  simulateTouch: false,
 });
 
 if (window.matchMedia(`(max-width: 1400px)`).matches) {
@@ -22,6 +23,7 @@ if (window.matchMedia(`(max-width: 1400px)`).matches) {
     spaceBetween: 6,
     slidesPerView: 3,
     slidesPerGroup: 3,
+    simulateTouch: false,
   });
 }
 

@@ -135,14 +135,11 @@
   margin-top: 31px;
 }
 
-.feedback__list-item-span-wrapper span {
+.feedback__list-item-span-wrapper span,
+.feedback__list-item-span-wrapper h3 {
   font-size: 14px;
   line-height: 19px;
   margin-bottom: 5px;
-}
-
-.feedback__list-item-span-wrapper span:first-of-type {
-  font-weight: bold;
 }
 
 @media (max-width: $tabletResolution) {

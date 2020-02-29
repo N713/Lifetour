@@ -39,17 +39,17 @@
   margin-bottom: 50px;
 }
 
-.about-us__wrapper {
+.about-us__wrapper-text div {
   margin-bottom: 55px;
 }
 
-.about-us__wrapper h3 {
+.about-us__wrapper-text div h3 {
   font-size: 21px;
   line-height: 26px;
   margin-bottom: 16px;
 }
 
-.about-us__wrapper p {
+.about-us__wrapper-text div p {
   box-sizing: border-box;
   width: 545px;
   font-size: 14px;
@@ -61,28 +61,28 @@
     padding-bottom: 21px;
   }
 
-  .about-us__wrapper {
+  .about-us__wrapper-text div {
     margin-bottom: 76px;
   }
 
-  .about-us__wrapper:first-of-type p {
+  .about-us__wrapper-text div:first-of-type p {
     width: 278px;
   }
 
-  .about-us__wrapper:first-of-type p:last-of-type {
+  .about-us__wrapper-text div:first-of-type p:last-of-type {
     margin-top: -5px;
   }
 
-  .about-us__wrapper:last-of-type {
+  .about-us__wrapper-text div:last-of-type {
     position: relative;
     left: -269px;
   }
 
-  .about-us__wrapper:last-of-type h3 {
+  .about-us__wrapper-text div:last-of-type h3 {
     margin-bottom: 12px;
   }
 
-  .about-us__wrapper:last-of-type p {
+  .about-us__wrapper-text div:last-of-type p {
     width: 540px;
   }
 
@@ -99,7 +99,7 @@
     margin-bottom: 42px;
   }
 
-  .about-us__wrapper h3 {
+  .about-us__wrapper-text div h3 {
     font-size: 18px;
     line-height: 22px;
     margin-bottom: 22px;
@@ -129,25 +129,24 @@
     padding-bottom: 0;
   }
 
-  .about-us__wrapper {
+  .about-us__wrapper-text div {
     margin-bottom: 40px;
   }
 
-  .about-us__wrapper:last-of-type {
+  .about-us__wrapper-text div:last-of-type {
     margin-bottom: 0;
   }
 
-  .about-us__wrapper:last-of-type h3 {
+  .about-us__wrapper-text div:last-of-type h3 {
     margin-bottom: 18px;
   }
 
-  .about-us__wrapper:first-of-type p,
-  .about-us__wrapper:last-of-type p {
-    //width: 280px;
+  .about-us__wrapper-text div:first-of-type p,
+  .about-us__wrapper-text div:last-of-type p {
     width: auto;
   }
 
-  .about-us__wrapper:last-of-type {
+  .about-us__wrapper-text div:last-of-type {
     left: 0;
     position: static;
   }

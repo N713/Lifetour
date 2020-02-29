@@ -39,12 +39,21 @@
   max-width: 384px;
 }
 
+.tours__list-item::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
 .tours__list-item img {
   position: absolute;
   display: block;
   width: 100%;
   height: 100%;
-  z-index: -10;
 }
 
 .tours__list-item-wrapper {
@@ -56,7 +65,6 @@
   max-width: 384px;
   min-height: 412px;
   padding: 21px;
-  background-color: rgba(0, 0, 0, 0.35);
 }
 
 .tours__list-item-wrapper h3 {
@@ -73,6 +81,7 @@
   @include reset;
   padding-bottom: 13px;
   margin-bottom: 22px;
+  z-index: 10;
 }
 
 .tours__list-item-wrapper p::after {
@@ -90,6 +99,7 @@
 .tours__list-item-inner-list {
   justify-content: flex-start;
   margin-bottom: 22px;
+  z-index: 10;
 }
 
 .tours__list-item-inner-list:last-of-type {
@@ -108,8 +118,18 @@
   position: relative;
 }
 
-.tours__list-item-inner-list-item--difficulty {
-  background-image: url("..img/icon-star-empty.svg"), url("..img/icon-star-full.svg");
+.tours__list-item-inner-list--three-stars .tours__list-item-inner-list-item--difficulty {
+  width: 79px;
+  background-image: url("../img/three-of-five-stars.svg");
+  background-position: center bottom 6px;
+  background-repeat: no-repeat;
+}
+
+.tours__list-item-inner-list--two-stars .tours__list-item-inner-list-item--difficulty {
+  width: 79px;
+  background-image: url("../img/two-of-five-stars.svg");
+  background-position: center bottom 6px;
+  background-repeat: no-repeat;
 }
 
 .tours__list-item-inner-list-item--place {
@@ -217,11 +237,8 @@
   }
 }
 
-.tours__link::after {
-  content: "";
+.tours__link span {
   display: inline-block;
-  position: absolute;
-  right: -26px;
   width: 20px;
   height: 20px;
   background-image: url("../img/all-tours-icon.svg");
