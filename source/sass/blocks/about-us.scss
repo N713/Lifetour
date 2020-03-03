@@ -130,10 +130,32 @@
 
   .about-us {
     padding-bottom: 0;
+    padding-top: 0;
+    position: relative;
+    top: -100px;
+  }
+
+  .about-us__wrapper-text {
+    left: 0;
+    position: static;
+    padding-left: 20px;
+    padding-top: 0;
+    margin-top: -13px;
+  }
+
+  .about-us__wrapper-text h2 {
+    font-size: 22px;
+    line-height: 27px;
+    margin-bottom: 27px;
+  }
+
+  .about-us__wrapper-text h2::after {
+    font-size: 30px;
+    line-height: 37px;
   }
 
   .about-us__wrapper-text div {
-    margin-bottom: 40px;
+    margin-bottom: 22px;
   }
 
   .about-us__wrapper-text div:last-of-type {
@@ -158,25 +180,5 @@
     width: 190%;
     height: 45.6%;
     left: -76%;
-    top: -207px;
-  }
-
-  .about-us__wrapper-text {
-    left: 0;
-    position: static;
-    padding-top: 9px;
-    padding-left: 20px;
-    margin-top: -151px;
-  }
-
-  .about-us__wrapper-text h2 {
-    font-size: 22px;
-    line-height: 27px;
-    margin-bottom: 45px;
-  }
-
-  .about-us__wrapper-text h2::after {
-    font-size: 30px;
-    line-height: 37px;
   }
 }

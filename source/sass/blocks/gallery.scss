@@ -144,7 +144,7 @@
 @media (max-width: $mobileResolution) {
   .gallery__wrapper {
     padding: 0 20px;
-    padding-top: 43px;
+    padding-top: 24px;
     margin-bottom: 33px;
   }
 
@@ -159,17 +159,23 @@
     line-height: 37px;
   }
 
+  .gallery__wrapper .header-with-pseudo::after {
+    bottom: 0;
+  }
+
   .gallery__wrapper-header p {
     margin-left: 0;
+    margin-right: 10%;
   }
 
   .gallery__buttons-wrapper {
     left: -1px;
-    top: 108px;
+    top: 99px;
   }
 
   .gallery__wrapper-list {
     justify-content: flex-start;
+    left: 326px;
   }
 
   .gallery__list,

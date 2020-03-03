@@ -103,6 +103,7 @@
   .trainers {
     padding: 0 90px;
     padding-top: 17px;
+    overflow: visible;
   }
 
   .trainers__wrapper h3 {
@@ -118,18 +119,19 @@
 
   .trainers__list-wrapper {
     padding-top: 23px;
+    overflow-x: visible;
   }
 
   .trainers__list .trainers__list-item p {
     width: auto;
   }
 
-  .training__wrapper::after {
+  .trainers__wrapper::after {
     content: "";
     display: inline-block;
-    width: 11.2%;
+    width: 23.1%;
     height: 390px;
-    margin-top: 290px;
+    margin-top: 67px;
     position: absolute;
     background-color: white;
     opacity: 0.8;
@@ -139,14 +141,37 @@
 }
 
 @media (max-width: $mobileResolution) {
+  .trainers {
+    padding: 0;
+  }
+
   .trainers__wrapper {
-    margin-bottom: 31px;
+    padding: 0 20px;
+  }
+
+  .trainers__wrapper::after {
+    content: "";
+    display: inline-block;
+    width: 19.2%;
+    height: 390px;
+    margin-top: 66px;
+    position: absolute;
+    background-color: white;
+    opacity: 0.8;
+    right: 0;
+    z-index: 1;
   }
 
   .trainers__wrapper h3 {
     font-size: 16px;
     line-height: 20px;
     margin-left: 0;
+    margin-top: 10px;
+    margin-bottom: 13px;
+  }
+
+  .trainers__list-wrapper {
+    padding-left: 20px;
   }
 
   .trainers__buttons-wrapper {

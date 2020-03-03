@@ -26,7 +26,7 @@
   .wrapper {
     background-image: none, url("../img/main-back@1x.jpg");
     background-position: center, left 63% top;
-    padding-bottom: 50px;
+    padding-bottom: 40px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: none, url("../img/main-back@2x.jpg");

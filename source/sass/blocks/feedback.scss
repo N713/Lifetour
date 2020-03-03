@@ -190,7 +190,13 @@
 
 @media (max-width: $mobileResolution) {
   .feedback {
-    padding-top: 32px;
+    padding: 0;
+    margin-top: -102px;
+  }
+
+  .feedback__wrapper-outer {
+    padding: 0 20px;
+    padding-top: 20px;
   }
 
   .feedback__wrapper {
@@ -199,13 +205,13 @@
   }
 
   .feedback__wrapper::after {
-    height: 545px;
+    display: none;
   }
 
   .feedback__wrapper h2 {
     font-size: 22px;
     line-height: 27px;
-    margin-top: 0;
+    margin-top: 15px;
     margin-bottom: 33px;
   }
 
@@ -215,22 +221,33 @@
   }
 
   .feedback__buttons-wrapper {
-    margin-top: 6px;
-    margin-right: 1px;
+    margin-top: 20px;
+    margin-right: 30px;
   }
 
-  .feedback__list-item,
-  .feedback__list-item:nth-of-type(2n),
-  .feedback__list-item:nth-of-type(3n) {
+  .feedback__list-item {
     width: 278px;
     box-sizing: border-box;
-    min-height: 545px;
+    min-height: 535px;
     padding: 45px 4px 28px 13px;
   }
 
+  .feedback__list-item p {
+    margin-bottom: 21px;
+  }
+
+  .feedback__list-item br {
+    display: none;
+  }
+
+  .feedback__list-item p:last-of-type br:first-of-type,
+  .feedback__list-item p:last-of-type br:last-of-type {
+    display: block;
+  }
+
   .feedback__list-item-wrapper {
-    margin-bottom: 18px;
-  };
+    margin-bottom: 9px;
+  }
 
   .feedback__list-item-span-wrapper {
     margin-left: 7.5px;

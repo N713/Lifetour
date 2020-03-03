@@ -211,7 +211,15 @@
 
 @media (max-width: $mobileResolution) {
   .stages {
-    padding-top: 45px;
+    padding: 0;
+    padding-top: 47px;
+  }
+
+  .stages h3 {
+    font-size: 16px;
+    line-height: 20px;
+    padding-left: 22px;
+    margin-bottom: 46px;
   }
 
   .stages__list {

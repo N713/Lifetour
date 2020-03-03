@@ -134,11 +134,12 @@
 @media (max-width: $mobileResolution) {
   .questions {
     padding-top: 190px;
-    padding-bottom: 139px;
+    padding-bottom: 105px;
   }
 
   .questions__wrapper h2 {
-    margin-bottom: 19px;
+    margin-bottom: 20px;
+    max-width: 90%;
   }
 
   .questions__wrapper p {
