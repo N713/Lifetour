@@ -1,11 +1,11 @@
 import Swiper from "swiper";
+import {setWidth} from "./utils";
 
-const cardWidth = 388.5;
-const cardWidthMobile = 278;
-const spaceBetween = 15;
-const gap = 5;
+const GAP = 5;
+const SPACE_BETWEEN = 15;
+const card = document.body.querySelector(`.feedback .feedback__list .feedback__list-item`);
 
-let swiperFeedback = new Swiper ('.swiper-container-feedback', {
+const swiperFeedback = new Swiper ('.swiper-container-feedback', {
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -15,20 +15,20 @@ let swiperFeedback = new Swiper ('.swiper-container-feedback', {
     320: {
       slidesPerView: 1,
       slidesPerGroup: 1,
-      spaceBetween: spaceBetween,
-      width: cardWidthMobile + 3 * spaceBetween + gap,
+      spaceBetween: SPACE_BETWEEN,
+      width: setWidth(card.offsetWidth,1,SPACE_BETWEEN, 3) + GAP,
     },
 
     768: {
       slidesPerView: 1,
       slidesPerGroup: 1,
-      width: cardWidth + 2 * spaceBetween,
+      width: setWidth(card.offsetWidth, 1, SPACE_BETWEEN, 2),
     },
 
     1024: {
       slidesPerView: 3,
       slidesPerGroup: 3,
-      width: 3 * cardWidth + 2 * spaceBetween,
+      width: setWidth(card.offsetWidth, 3, SPACE_BETWEEN, 2),
     },
   }
 });

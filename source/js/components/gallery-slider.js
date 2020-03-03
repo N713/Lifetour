@@ -1,6 +1,6 @@
 import Swiper from "swiper";
 
-let gallerySwiper = new Swiper ('.swiper-container-gallery', {
+const gallerySwiper = new Swiper ('.swiper-container-gallery', {
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -15,4 +15,4 @@ let gallerySwiper = new Swiper ('.swiper-container-gallery', {
   loop: true,
 });
 
-export {gallerySwiper}
+export {gallerySwiper};

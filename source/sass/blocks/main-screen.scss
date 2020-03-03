@@ -50,10 +50,11 @@
   margin-bottom: 107px;
 }
 
-.main-screen__list {
+.main-screen .main-screen__list {
   position: relative;
   top: -5px;
   right: -8px;
+  justify-content: flex-end;
 }
 
 @media (max-width: $tabletResolution) {

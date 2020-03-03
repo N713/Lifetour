@@ -36,8 +36,9 @@
   color: white;
   margin-right: 21px;
   margin-bottom: 21px;
+  width: 384px;
   min-width: 384px;
-  max-width: 384px;
+  //max-width: 384px;
 }
 
 .tours__list-item::after {
@@ -63,7 +64,6 @@
   justify-content: flex-end;
   box-sizing: border-box;
   width: 384px;
-  max-width: 384px;
   min-height: 412px;
   padding: 21px;
 }

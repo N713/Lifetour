@@ -1,7 +1,8 @@
 import Swiper from "swiper";
+import {setWidth} from "./utils";
 
-const cardWidth = 234;
-const spaceBetween = 8;
+const SPACE_BETWEEN = 8;
+const card = document.body.querySelector(`.trainers .trainers__list .trainers__list-item`);
 
 const instructorsSwiper = new Swiper ('.swiper-container-trainers', {
   navigation: {
@@ -13,20 +14,20 @@ const instructorsSwiper = new Swiper ('.swiper-container-trainers', {
     320: {
       slidesPerView: 1,
       slidesPerGroup: 1,
-      spaceBetween: spaceBetween,
-      width: cardWidth,
+      spaceBetween: SPACE_BETWEEN,
+      width: card.offsetWidth,
     },
 
     768: {
       slidesPerView: 1,
       slidesPerGroup: 1,
-      width: 2 * cardWidth + 2 * spaceBetween,
+      width: setWidth(card.offsetWidth, 2, SPACE_BETWEEN, 2),
     },
 
     1024: {
       slidesPerView: 5,
       slidesPerGroup: 5,
-      width: 5 * cardWidth + 2 * spaceBetween,
+      width: setWidth(card.offsetWidth, 5, SPACE_BETWEEN, 4),
     },
   }
 });

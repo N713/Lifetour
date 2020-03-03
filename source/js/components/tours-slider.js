@@ -1,7 +1,8 @@
 import Swiper from "swiper";
+import {setWidth} from "./utils";
 
-const cardMobileWidth = 281;
-const spaceBetween = 20;
+const SPACE_BETWEEN = 20;
+const card = document.body.querySelector(`.tours .tours__list .tours__list-item`);
 
 const swiperTours = new Swiper ('.swiper-container-tours', {
   navigation: {
@@ -13,8 +14,8 @@ const swiperTours = new Swiper ('.swiper-container-tours', {
     320: {
       slidesPerView: 1,
       slidesPerGroup: 1,
-      spaceBetween: spaceBetween,
-      width: cardMobileWidth + 2 * spaceBetween,
+      spaceBetween: SPACE_BETWEEN,
+      width: setWidth(card.offsetWidth, 1, SPACE_BETWEEN, 2),
     },
 
     768: {
