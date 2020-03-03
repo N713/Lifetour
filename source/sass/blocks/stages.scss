@@ -5,13 +5,17 @@
   max-width: 1310px;
   margin: 0 auto;
   padding: 0 60px;
-  padding-top: 34px;
+  padding-top: 8px;
   overflow: hidden;
 }
 
 .stages h3 {
+  font-size: 21px;
+  line-height: 26px;
+
   @include reset;
   margin-bottom: 34px;
+  margin-left: -2px;
 }
 
 .stages__list {
@@ -19,6 +23,7 @@
   justify-content: flex-start;
   flex-wrap: nowrap;
   padding-left: 35px;
+  margin-bottom: 10px;
 }
 
 .stages__list-item {
@@ -88,7 +93,7 @@
   width: 14px;
   height: 14px;
   left: -32px;
-  bottom: -5px;
+  bottom: -8px;
   background-image: url("../img/icon-blue-dot.svg");
   background-position: center center;
   background-repeat: no-repeat;

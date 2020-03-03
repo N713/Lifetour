@@ -27,6 +27,7 @@ const swiperTours = new Swiper ('.swiper-container-tours', {
     1024: {
       slidesPerView: 3,
       slidesPerGroup: 3,
+      slidesOffsetAfter: 10,
     },
   }
 });

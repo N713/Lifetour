@@ -4,6 +4,7 @@
   flex-direction: column;
   margin: 0 auto;
   padding-bottom: 50px;
+  padding-top: 33px;
   overflow-x: hidden;
 }
 
@@ -78,7 +79,7 @@
 .footer__list {
   width: 200px;
   position: relative;
-  right: 22px;
+  right: -22px;
   bottom: 5px;
 }
 

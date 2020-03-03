@@ -2,7 +2,7 @@ import Swiper from "swiper";
 import {setWidth} from "./utils";
 
 const GAP = 5;
-const SPACE_BETWEEN = 15;
+const SPACE_BETWEEN = 9;
 const card = document.body.querySelector(`.feedback .feedback__list .feedback__list-item`);
 
 const swiperFeedback = new Swiper ('.swiper-container-feedback', {

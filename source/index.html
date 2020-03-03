@@ -15,6 +15,19 @@
     document.createElement( "picture" );
     //По руководству автора - http://scottjehl.github.io/picturefill/
   </script>
+  <!-- Pixel Glass -->
+  <style>
+    HTML {
+      background-repeat: no-repeat;
+      background-position:  50% 0;
+      /* Mobile layout by default */
+      background-image: url( "img/Desktop.jpg" );
+      opacity: 0.5;
+    }
+  </style>
+  <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
+  <script src="../node_modules/pixel-glass/script.js"></script>
+  <!-- // Pixel Glass -->
   <title>LIFETOUR</title>
 </head>
 <body>
@@ -318,208 +331,210 @@
             </button>
           </div>
         </div>
-        <ul class="list trainers__list swiper-wrapper">
-          <li class="list__item trainers__list-item swiper-slide">
-            <picture>
-              <source type="image/webp"
-                      srcset="img/instructor-alex@1x.webp 1x, img/instructor-alex@2x.webp 2x">
+        <div class="trainers__list-wrapper">
+          <ul class="list trainers__list swiper-wrapper">
+            <li class="list__item trainers__list-item swiper-slide">
+              <picture>
+                <source type="image/webp"
+                        srcset="img/instructor-alex@1x.webp 1x, img/instructor-alex@2x.webp 2x">
 
-              <img src="img/instructor-alex@1x.jpg"
-                   srcset="img/instructor-alex@2x.jpg 2x"
-                   width="204" height="212" alt="Александр">
-            </picture>
-            <div class="trainers__list-item-wrapper">
-              <h3>Александр Прокофьев</h3>
-              <a href="#" class="trainers__list-item-link">
-                <span class="visually-hidden">Вконтакте</span>
-              </a>
-            </div>
-            <p>
-              Любит природу. Строгий, справедливый и внимательный инструктор,
-              веселый и общительный человек.
-            </p>
-          </li>
-          <li class="list__item trainers__list-item swiper-slide">
-            <picture>
-              <source type="image/webp"
-                      srcset="img/instructor-svetlana@1x.webp 1x, img/instructor-svatlana@2x.webp 2x">
+                <img src="img/instructor-alex@1x.jpg"
+                     srcset="img/instructor-alex@2x.jpg 2x"
+                     width="204" height="212" alt="Александр">
+              </picture>
+              <div class="trainers__list-item-wrapper">
+                <h3>Александр Прокофьев</h3>
+                <a href="#" class="trainers__list-item-link">
+                  <span class="visually-hidden">Вконтакте</span>
+                </a>
+              </div>
+              <p>
+                Любит природу. Строгий, справедливый и внимательный инструктор,
+                веселый и общительный человек.
+              </p>
+            </li>
+            <li class="list__item trainers__list-item swiper-slide">
+              <picture>
+                <source type="image/webp"
+                        srcset="img/instructor-svetlana@1x.webp 1x, img/instructor-svatlana@2x.webp 2x">
 
-              <img src="img/instructor-svetlana@1x.jpg"
-                   srcset="img/instructor-svatlana@2x.jpg 2x"
-                   width="204" height="212" alt="Светлана">
-            </picture>
-            <div class="trainers__list-item-wrapper">
-              <h3>Светлана Афиногенова</h3>
-              <a href="#" class="trainers__list-item-link">
-                <span class="visually-hidden">Вконтакте</span>
-              </a>
-            </div>
-            <p>
-              Видеть мир вокруг, познавать его опасности, смотреть сквозь стены, находить друг друга,
-              становиться ближе, чувствовать — в этом назначение жизни.
-            </p>
-          </li>
-          <li class="list__item trainers__list-item swiper-slide">
-            <picture>
-              <source type="image/webp"
-                      srcset="img/instructor-nadya@1x.webp 1x, img/instructor-nadya@2x.webp 2x">
+                <img src="img/instructor-svetlana@1x.jpg"
+                     srcset="img/instructor-svatlana@2x.jpg 2x"
+                     width="204" height="212" alt="Светлана">
+              </picture>
+              <div class="trainers__list-item-wrapper">
+                <h3>Светлана Афиногенова</h3>
+                <a href="#" class="trainers__list-item-link">
+                  <span class="visually-hidden">Вконтакте</span>
+                </a>
+              </div>
+              <p>
+                Видеть мир вокруг, познавать его опасности, смотреть сквозь стены, находить друг друга,
+                становиться ближе, чувствовать — в этом назначение жизни.
+              </p>
+            </li>
+            <li class="list__item trainers__list-item swiper-slide">
+              <picture>
+                <source type="image/webp"
+                        srcset="img/instructor-nadya@1x.webp 1x, img/instructor-nadya@2x.webp 2x">
 
-              <img src="img/instructor-nadya@1x.jpg"
-                   srcset="img/instructor-nadya@2x.jpg"
-                   width="204" height="212" alt="Надежда">
-            </picture>
-            <div class="trainers__list-item-wrapper">
-              <h3>Надежда Колесниченко</h3>
-              <a href="#" class="trainers__list-item-link">
-                <span class="visually-hidden">Вконтакте</span>
-              </a>
-            </div>
-            <p>
-              Участники говорят, что Надежда ответственная, приятная в общении,
-              и в поездках с ней чувствуешь себя спокойно и уверенно.
-            </p>
-          </li>
-          <li class="list__item trainers__list-item swiper-slide">
-            <picture>
-              <source type="image/webp"
-                      srcset="img/instructor-fedor@1x.webp 1x, img/instructor-fedor@2x.webp 2x">
+                <img src="img/instructor-nadya@1x.jpg"
+                     srcset="img/instructor-nadya@2x.jpg"
+                     width="204" height="212" alt="Надежда">
+              </picture>
+              <div class="trainers__list-item-wrapper">
+                <h3>Надежда Колесниченко</h3>
+                <a href="#" class="trainers__list-item-link">
+                  <span class="visually-hidden">Вконтакте</span>
+                </a>
+              </div>
+              <p>
+                Участники говорят, что Надежда ответственная, приятная в общении,
+                и в поездках с ней чувствуешь себя спокойно и уверенно.
+              </p>
+            </li>
+            <li class="list__item trainers__list-item swiper-slide">
+              <picture>
+                <source type="image/webp"
+                        srcset="img/instructor-fedor@1x.webp 1x, img/instructor-fedor@2x.webp 2x">
 
-              <img src="img/instructor-fedor@1x.jpg"
-                   srcset="img/instructor-fedor@2x.jpg 2x"
-                   width="204" height="212" alt="Федор">
-            </picture>
-            <div class="trainers__list-item-wrapper">
-              <h3>Федор Кайгородов</h3>
-              <a href="#" class="trainers__list-item-link">
-                <span class="visually-hidden">Вконтакте</span>
-              </a>
-            </div>
-            <p>
-              Опыт походов: Ходит в походы с 2001 года. В России побывал в горных районах Хибины,
-              приэльбрусье, Архыз, много путешествует по Европе.
-            </p>
-          </li>
-          <li class="list__item trainers__list-item swiper-slide">
-            <picture>
-              <source type="image/webp"
-                      srcset="img/instructor-serg@1x.webp 1x, img/instructor-serg@2x.webp 2x">
+                <img src="img/instructor-fedor@1x.jpg"
+                     srcset="img/instructor-fedor@2x.jpg 2x"
+                     width="204" height="212" alt="Федор">
+              </picture>
+              <div class="trainers__list-item-wrapper">
+                <h3>Федор Кайгородов</h3>
+                <a href="#" class="trainers__list-item-link">
+                  <span class="visually-hidden">Вконтакте</span>
+                </a>
+              </div>
+              <p>
+                Опыт походов: Ходит в походы с 2001 года. В России побывал в горных районах Хибины,
+                приэльбрусье, Архыз, много путешествует по Европе.
+              </p>
+            </li>
+            <li class="list__item trainers__list-item swiper-slide">
+              <picture>
+                <source type="image/webp"
+                        srcset="img/instructor-serg@1x.webp 1x, img/instructor-serg@2x.webp 2x">
 
-              <img src="img/instructor-serg@1x.jpg"
-                   srcset="img/instructor-serg@2x.jpg 2x"
-                   width="204" height="212" alt="Сергей">
-            </picture>
-            <div class="trainers__list-item-wrapper">
-              <h3>Сергей Денисов</h3>
-              <a href="#" class="trainers__list-item-link">
-                <span class="visually-hidden">Вконтакте</span>
-              </a>
-            </div>
-            <p>
-              Профессиональный гид, путешественник, спортсмен, альпинист.
-              Блестящий рассказчик, собеседник; с ним не скучно.
-            </p>
-          </li>
-          <li class="list__item trainers__list-item swiper-slide">
-            <picture>
-              <source type="image/webp"
-                      srcset="img/instructor-alex@1x.webp 1x, img/instructor-alex@2x.webp 2x">
+                <img src="img/instructor-serg@1x.jpg"
+                     srcset="img/instructor-serg@2x.jpg 2x"
+                     width="204" height="212" alt="Сергей">
+              </picture>
+              <div class="trainers__list-item-wrapper">
+                <h3>Сергей Денисов</h3>
+                <a href="#" class="trainers__list-item-link">
+                  <span class="visually-hidden">Вконтакте</span>
+                </a>
+              </div>
+              <p>
+                Профессиональный гид, путешественник, спортсмен, альпинист.
+                Блестящий рассказчик, собеседник; с ним не скучно.
+              </p>
+            </li>
+            <li class="list__item trainers__list-item swiper-slide">
+              <picture>
+                <source type="image/webp"
+                        srcset="img/instructor-alex@1x.webp 1x, img/instructor-alex@2x.webp 2x">
 
-              <img src="img/instructor-alex@1x.jpg"
-                   srcset="img/instructor-alex@2x.jpg 2x"
-                   width="204" height="212" alt="Александр">
-            </picture>
-            <div class="trainers__list-item-wrapper">
-              <h3>Александр Прокофьев</h3>
-              <a href="#" class="trainers__list-item-link">
-                <span class="visually-hidden">Вконтакте</span>
-              </a>
-            </div>
-            <p>
-              Любит природу. Строгий, справедливый и внимательный инструктор,
-              веселый и общительный человек.
-            </p>
-          </li>
-          <li class="list__item trainers__list-item swiper-slide">
-            <picture>
-              <source type="image/webp"
-                      srcset="img/instructor-svetlana@1x.webp 1x, img/instructor-svatlana@2x.webp 2x">
+                <img src="img/instructor-alex@1x.jpg"
+                     srcset="img/instructor-alex@2x.jpg 2x"
+                     width="204" height="212" alt="Александр">
+              </picture>
+              <div class="trainers__list-item-wrapper">
+                <h3>Александр Прокофьев</h3>
+                <a href="#" class="trainers__list-item-link">
+                  <span class="visually-hidden">Вконтакте</span>
+                </a>
+              </div>
+              <p>
+                Любит природу. Строгий, справедливый и внимательный инструктор,
+                веселый и общительный человек.
+              </p>
+            </li>
+            <li class="list__item trainers__list-item swiper-slide">
+              <picture>
+                <source type="image/webp"
+                        srcset="img/instructor-svetlana@1x.webp 1x, img/instructor-svatlana@2x.webp 2x">
 
-              <img src="img/instructor-svetlana@1x.jpg"
-                   srcset="img/instructor-svatlana@2x.jpg 2x"
-                   width="204" height="212" alt="Светлана">
-            </picture>
-            <div class="trainers__list-item-wrapper">
-              <h3>Светлана Афиногенова</h3>
-              <a href="#" class="trainers__list-item-link">
-                <span class="visually-hidden">Вконтакте</span>
-              </a>
-            </div>
-            <p>
-              Видеть мир вокруг, познавать его опасности, смотреть сквозь стены, находить друг друга,
-              становиться ближе, чувствовать — в этом назначение жизни.
-            </p>
-          </li>
-          <li class="list__item trainers__list-item swiper-slide">
-            <picture>
-              <source type="image/webp"
-                      srcset="img/instructor-nadya@1x.webp 1x, img/instructor-nadya@2x.webp 2x">
+                <img src="img/instructor-svetlana@1x.jpg"
+                     srcset="img/instructor-svatlana@2x.jpg 2x"
+                     width="204" height="212" alt="Светлана">
+              </picture>
+              <div class="trainers__list-item-wrapper">
+                <h3>Светлана Афиногенова</h3>
+                <a href="#" class="trainers__list-item-link">
+                  <span class="visually-hidden">Вконтакте</span>
+                </a>
+              </div>
+              <p>
+                Видеть мир вокруг, познавать его опасности, смотреть сквозь стены, находить друг друга,
+                становиться ближе, чувствовать — в этом назначение жизни.
+              </p>
+            </li>
+            <li class="list__item trainers__list-item swiper-slide">
+              <picture>
+                <source type="image/webp"
+                        srcset="img/instructor-nadya@1x.webp 1x, img/instructor-nadya@2x.webp 2x">
 
-              <img src="img/instructor-nadya@1x.jpg"
-                   srcset="img/instructor-nadya@2x.jpg"
-                   width="204" height="212" alt="Надежда">
-            </picture>
-            <div class="trainers__list-item-wrapper">
-              <h3>Надежда Колесниченко</h3>
-              <a href="#" class="trainers__list-item-link">
-                <span class="visually-hidden">Вконтакте</span>
-              </a>
-            </div>
-            <p>
-              Участники говорят, что Надежда ответственная, приятная в общении,
-              и в поездках с ней чувствуешь себя спокойно и уверенно.
-            </p>
-          </li>
-          <li class="list__item trainers__list-item swiper-slide">
-            <picture>
-              <source type="image/webp"
-                      srcset="img/instructor-fedor@1x.webp 1x, img/instructor-fedor@2x.webp 2x">
+                <img src="img/instructor-nadya@1x.jpg"
+                     srcset="img/instructor-nadya@2x.jpg"
+                     width="204" height="212" alt="Надежда">
+              </picture>
+              <div class="trainers__list-item-wrapper">
+                <h3>Надежда Колесниченко</h3>
+                <a href="#" class="trainers__list-item-link">
+                  <span class="visually-hidden">Вконтакте</span>
+                </a>
+              </div>
+              <p>
+                Участники говорят, что Надежда ответственная, приятная в общении,
+                и в поездках с ней чувствуешь себя спокойно и уверенно.
+              </p>
+            </li>
+            <li class="list__item trainers__list-item swiper-slide">
+              <picture>
+                <source type="image/webp"
+                        srcset="img/instructor-fedor@1x.webp 1x, img/instructor-fedor@2x.webp 2x">
 
-              <img src="img/instructor-fedor@1x.jpg"
-                   srcset="img/instructor-fedor@2x.jpg 2x"
-                   width="204" height="212" alt="Федор">
-            </picture>
-            <div class="trainers__list-item-wrapper">
-              <h3>Федор Кайгородов</h3>
-              <a href="#" class="trainers__list-item-link">
-                <span class="visually-hidden">Вконтакте</span>
-              </a>
-            </div>
-            <p>
-              Опыт походов: Ходит в походы с 2001 года. В России побывал в горных районах Хибины,
-              приэльбрусье, Архыз, много путешествует по Европе.
-            </p>
-          </li>
-          <li class="list__item trainers__list-item swiper-slide">
-            <picture>
-              <source type="image/webp"
-                      srcset="img/instructor-serg@1x.webp 1x, img/instructor-serg@2x.webp 2x">
+                <img src="img/instructor-fedor@1x.jpg"
+                     srcset="img/instructor-fedor@2x.jpg 2x"
+                     width="204" height="212" alt="Федор">
+              </picture>
+              <div class="trainers__list-item-wrapper">
+                <h3>Федор Кайгородов</h3>
+                <a href="#" class="trainers__list-item-link">
+                  <span class="visually-hidden">Вконтакте</span>
+                </a>
+              </div>
+              <p>
+                Опыт походов: Ходит в походы с 2001 года. В России побывал в горных районах Хибины,
+                приэльбрусье, Архыз, много путешествует по Европе.
+              </p>
+            </li>
+            <li class="list__item trainers__list-item swiper-slide">
+              <picture>
+                <source type="image/webp"
+                        srcset="img/instructor-serg@1x.webp 1x, img/instructor-serg@2x.webp 2x">
 
-              <img src="img/instructor-serg@1x.jpg"
-                   srcset="img/instructor-serg@2x.jpg 2x"
-                   width="204" height="212" alt="Сергей">
-            </picture>
-            <div class="trainers__list-item-wrapper">
-              <h3>Сергей Денисов</h3>
-              <a href="#" class="trainers__list-item-link">
-                <span class="visually-hidden">Вконтакте</span>
-              </a>
-            </div>
-            <p>
-              Профессиональный гид, путешественник, спортсмен, альпинист.
-              Блестящий рассказчик, собеседник; с ним не скучно.
-            </p>
-          </li>
-        </ul>
+                <img src="img/instructor-serg@1x.jpg"
+                     srcset="img/instructor-serg@2x.jpg 2x"
+                     width="204" height="212" alt="Сергей">
+              </picture>
+              <div class="trainers__list-item-wrapper">
+                <h3>Сергей Денисов</h3>
+                <a href="#" class="trainers__list-item-link">
+                  <span class="visually-hidden">Вконтакте</span>
+                </a>
+              </div>
+              <p>
+                Профессиональный гид, путешественник, спортсмен, альпинист.
+                Блестящий рассказчик, собеседник; с ним не скучно.
+              </p>
+            </li>
+          </ul>
+        </div>
       </section>
       <section class="stages">
         <h3>Процесс обучения</h3>
@@ -563,7 +578,7 @@
     </div>
   </section>
   <section class="feedback">
-    <div class="feedback__wrapper-outer swiper-container-feedback">
+    <div class="feedback__wrapper-outer">
       <div class="feedback__wrapper">
         <h2 data-name="Отзывы" class="header-with-pseudo">Отзывы</h2>
         <div class="feedback__buttons-wrapper">
@@ -575,166 +590,168 @@
           </button>
         </div>
       </div>
-      <ul class="list feedback__list swiper-wrapper">
-        <li class="list__item feedback__list-item swiper-slide">
-          <div class="feedback__list-item-wrapper">
-            <picture>
-              <source type="image/webp"
-                      srcset="img/feedback-alex@1x.webp 1x, img/feedback-alex@2x.webp 2x">
+      <div class="feedback__list-wrapper swiper-container-feedback">
+        <ul class="list feedback__list swiper-wrapper">
+          <li class="list__item feedback__list-item swiper-slide">
+            <div class="feedback__list-item-wrapper">
+              <picture>
+                <source type="image/webp"
+                        srcset="img/feedback-alex@1x.webp 1x, img/feedback-alex@2x.webp 2x">
 
-              <img src="img/feedback-alex@1x.jpg"
-                   srcset="img/feedback-alex@2x.jpg 2x"
-                   width="97" height="100" alt="Александр">
-            </picture>
-            <div class="feedback__list-item-span-wrapper">
-              <h3>Фролов Александр</h3>
-              <span>28 лет, Москва</span>
+                <img src="img/feedback-alex@1x.jpg"
+                     srcset="img/feedback-alex@2x.jpg 2x"
+                     width="97" height="100" alt="Александр">
+              </picture>
+              <div class="feedback__list-item-span-wrapper">
+                <h3>Фролов Александр</h3>
+                <span>28 лет, Москва</span>
+              </div>
             </div>
-          </div>
-          <p>
-            Осенью ходили в поход с друзьями. Впечатления исключительно положительные!
-            Инструкторы - настоящие эксперты - всему научили, все показали.
-            Рассказали истории<br> о всех местах, которые мы так<br> или иначе посещали.
-          </p>
-          <p>
-            С уверенностью могу разделить жизнь<br> на до этого похода и после.
-            Настолько сильно не отдыхал душой и телом никогда.<br>
-            Всем рекомендую!
-          </p>
-        </li>
-        <li class="list__item feedback__list-item swiper-slide">
-          <div class="feedback__list-item-wrapper">
-            <picture>
-              <source type="image/webp"
-                      srcset="img/feedback-svetlana@1x.webp 1x, img/feedback-svetlana@2x.webp 2x">
+            <p>
+              Осенью ходили в поход с друзьями. Впечатления исключительно<br> положительные!
+              Инструкторы - настоящие эксперты - всему научили, все показали.
+              Рассказали истории<br> о всех местах, которые мы так<br> или иначе посещали.
+            </p>
+            <p>
+              С уверенностью могу разделить жизнь<br> на до этого похода и после.
+              Настолько<br> сильно не отдыхал душой и телом никогда.<br>
+              Всем рекомендую!
+            </p>
+          </li>
+          <li class="list__item feedback__list-item swiper-slide">
+            <div class="feedback__list-item-wrapper">
+              <picture>
+                <source type="image/webp"
+                        srcset="img/feedback-svetlana@1x.webp 1x, img/feedback-svetlana@2x.webp 2x">
 
-              <img src="img/feedback-svetlana@1x.jpg"
-                   srcset="img/feedback-svetlana@2x.jpg 2x"
-                   width="97" height="100" alt="Светлана">
-            </picture>
-            <div class="feedback__list-item-span-wrapper">
-              <h3>Светлана Олейник</h3>
-              <span>25 лет, Владивосток</span>
+                <img src="img/feedback-svetlana@1x.jpg"
+                     srcset="img/feedback-svetlana@2x.jpg 2x"
+                     width="97" height="100" alt="Светлана">
+              </picture>
+              <div class="feedback__list-item-span-wrapper">
+                <h3>Светлана Олейник</h3>
+                <span>25 лет, Владивосток</span>
+              </div>
             </div>
-          </div>
-          <p>
-            Хороший полноценный поход с разнообразными локациями.
-            В начале дорога идет по лыжне, далее прошли мимо полигона, по болотам,
-            у озер и лесных ручьев, остатков дач конца 19 века.<br>
-            Инструктор Федор Кайгородов добросовестный<br> и внимательный к технике
-            безопасности и своим туристам.
-          </p>
-          <p>
-            Совет для будущих походников: важно соблюсти рекомендации в памятке.
-          </p>
-        </li>
-        <li class="list__item feedback__list-item swiper-slide">
-          <div class="feedback__list-item-wrapper">
-            <picture>
-              <source type="image/webp"
-                      srcset="img/feedback-eugenya@1x.webp 1x, img/feedback-eugenya@2x.webp 2x">
+            <p>
+              Хороший полноценный поход с разнообразными локациями.
+              В начале дорога идет по лыжне, далее прошли мимо полигона, по болотам,
+              у озер и лесных ручьев, остатков дач конца 19 века.<br>
+              Инструктор Федор Кайгородов добросовестный<br> и внимательный к технике
+              безопасности и своим туристам.
+            </p>
+            <p>
+              Совет для будущих походников: важно соблюсти рекомендации в памятке.
+            </p>
+          </li>
+          <li class="list__item feedback__list-item swiper-slide">
+            <div class="feedback__list-item-wrapper">
+              <picture>
+                <source type="image/webp"
+                        srcset="img/feedback-eugenya@1x.webp 1x, img/feedback-eugenya@2x.webp 2x">
 
-              <img src="img/feedback-eugenya@1x.jpg"
-                   srcset="img/feedback-eugenya@2x.jpg 2x"
-                   width="97" height="100" alt="Евгения">
-            </picture>
-            <div class="feedback__list-item-span-wrapper">
-              <h3>Евгения Баженова</h3>
-              <span>23 года, Кострома</span>
+                <img src="img/feedback-eugenya@1x.jpg"
+                     srcset="img/feedback-eugenya@2x.jpg 2x"
+                     width="97" height="100" alt="Евгения">
+              </picture>
+              <div class="feedback__list-item-span-wrapper">
+                <h3>Евгения Баженова</h3>
+                <span>23 года, Кострома</span>
+              </div>
             </div>
-          </div>
-          <p>
-            Поход понравился!!<br> Ранее не ходила на такие длинные дистанции.
-            В первый день прошли около 30 км, физически я устала на 18м,
-            поэтому не была уверена, пройду ли до конца.
-            Но шла и шла впереди, не плелась в конце группы.
-            К моему удивлению второй день прошел для меня легче,
-            чем ожидала, видимо дело привычки.
-          </p>
-          <p>
-            Спасибо ребятам и инструкторам за помощь и поддержку!
-          </p>
-        </li>
-        <li class="list__item feedback__list-item swiper-slide">
-          <div class="feedback__list-item-wrapper">
-            <picture>
-              <source type="image/webp"
-                      srcset="img/feedback-alex@1x.webp 1x, img/feedback-alex@2x.webp 2x">
+            <p>
+              Поход понравился!!<br> Ранее не ходила на такие длинные дистанции.
+              В первый день прошли около 30 км, физически я устала на 18м,
+              поэтому не была уверена, пройду ли до конца.
+              Но шла и шла впереди, не плелась в конце группы.
+              К моему удивлению второй день прошел для меня легче,
+              чем ожидала, видимо дело привычки.
+            </p>
+            <p>
+              Спасибо ребятам и инструкторам за помощь и поддержку!
+            </p>
+          </li>
+          <li class="list__item feedback__list-item swiper-slide">
+            <div class="feedback__list-item-wrapper">
+              <picture>
+                <source type="image/webp"
+                        srcset="img/feedback-alex@1x.webp 1x, img/feedback-alex@2x.webp 2x">
 
-              <img src="img/feedback-alex@1x.jpg"
-                   srcset="img/feedback-alex@2x.jpg 2x"
-                   width="97" height="100" alt="Александр">
-            </picture>
-            <div class="feedback__list-item-span-wrapper">
-              <h3>Фролов Александр</h3>
-              <span>28 лет, Москва</span>
+                <img src="img/feedback-alex@1x.jpg"
+                     srcset="img/feedback-alex@2x.jpg 2x"
+                     width="97" height="100" alt="Александр">
+              </picture>
+              <div class="feedback__list-item-span-wrapper">
+                <h3>Фролов Александр</h3>
+                <span>28 лет, Москва</span>
+              </div>
             </div>
-          </div>
-          <p>
-            Осенью ходили в поход с друзьями. Впечатления исключительно положительные!
-            Инструкторы - настоящие эксперты - всему научили, все показали.
-            Рассказали истории<br> о всех местах, которые мы так<br> или иначе посещали.
-          </p>
-          <p>
-            С уверенностью могу разделить жизнь<br> на до этого похода и после.
-            Настолько сильно не отдыхал душой и телом никогда.<br>
-            Всем рекомендую!
-          </p>
-        </li>
-        <li class="list__item feedback__list-item swiper-slide">
-          <div class="feedback__list-item-wrapper">
-            <picture>
-              <source type="image/webp"
-                      srcset="img/feedback-svetlana@1x.webp 1x, img/feedback-svetlana@2x.webp 2x">
+            <p>
+              Осенью ходили в поход с друзьями. Впечатления исключительно положительные!
+              Инструкторы - настоящие эксперты - всему научили, все показали.
+              Рассказали истории<br> о всех местах, которые мы так<br> или иначе посещали.
+            </p>
+            <p>
+              С уверенностью могу разделить жизнь<br> на до этого похода и после.
+              Настолько сильно не отдыхал душой и телом никогда.<br>
+              Всем рекомендую!
+            </p>
+          </li>
+          <li class="list__item feedback__list-item swiper-slide">
+            <div class="feedback__list-item-wrapper">
+              <picture>
+                <source type="image/webp"
+                        srcset="img/feedback-svetlana@1x.webp 1x, img/feedback-svetlana@2x.webp 2x">
 
-              <img src="img/feedback-svetlana@1x.jpg"
-                   srcset="img/feedback-svetlana@2x.jpg 2x"
-                   width="97" height="100" alt="Светлана">
-            </picture>
-            <div class="feedback__list-item-span-wrapper">
-              <h3>Светлана Олейник</h3>
-              <span>25 лет, Владивосток</span>
+                <img src="img/feedback-svetlana@1x.jpg"
+                     srcset="img/feedback-svetlana@2x.jpg 2x"
+                     width="97" height="100" alt="Светлана">
+              </picture>
+              <div class="feedback__list-item-span-wrapper">
+                <h3>Светлана Олейник</h3>
+                <span>25 лет, Владивосток</span>
+              </div>
             </div>
-          </div>
-          <p>
-            Хороший полноценный поход с разнообразными локациями.
-            В начале дорога идет по лыжне, далее прошли мимо полигона, по болотам,
-            у озер и лесных ручьев, остатков дач конца 19 века.<br>
-            Инструктор Федор Кайгородов добросовестный<br> и внимательный к технике
-            безопасности и своим туристам.
-          </p>
-          <p>
-            Совет для будущих походников: важно соблюсти рекомендации в памятке.
-          </p>
-        </li>
-        <li class="list__item feedback__list-item swiper-slide">
-          <div class="feedback__list-item-wrapper">
-            <picture>
-              <source type="image/webp"
-                      srcset="img/feedback-eugenya@1x.webp 1x, img/feedback-eugenya@2x.webp 2x">
+            <p>
+              Хороший полноценный поход с разнообразными локациями.
+              В начале дорога идет по лыжне, далее прошли мимо полигона, по болотам,
+              у озер и лесных ручьев, остатков дач конца 19 века.<br>
+              Инструктор Федор Кайгородов добросовестный<br> и внимательный к технике
+              безопасности и своим туристам.
+            </p>
+            <p>
+              Совет для будущих походников: важно соблюсти рекомендации в памятке.
+            </p>
+          </li>
+          <li class="list__item feedback__list-item swiper-slide">
+            <div class="feedback__list-item-wrapper">
+              <picture>
+                <source type="image/webp"
+                        srcset="img/feedback-eugenya@1x.webp 1x, img/feedback-eugenya@2x.webp 2x">
 
-              <img src="img/feedback-eugenya@1x.jpg"
-                   srcset="img/feedback-eugenya@2x.jpg 2x"
-                   width="97" height="100" alt="Евгения">
-            </picture>
-            <div class="feedback__list-item-span-wrapper">
-              <h3>Евгения Баженова</h3>
-              <span>23 года, Кострома</span>
+                <img src="img/feedback-eugenya@1x.jpg"
+                     srcset="img/feedback-eugenya@2x.jpg 2x"
+                     width="97" height="100" alt="Евгения">
+              </picture>
+              <div class="feedback__list-item-span-wrapper">
+                <h3>Евгения Баженова</h3>
+                <span>23 года, Кострома</span>
+              </div>
             </div>
-          </div>
-          <p>
-            Поход понравился!!<br> Ранее не ходила на такие длинные дистанции.
-            В первый день прошли около 30 км, физически я устала на 18м,
-            поэтому не была уверена, пройду ли до конца.
-            Но шла и шла впереди, не плелась в конце группы.
-            К моему удивлению второй день прошел для меня легче,
-            чем ожидала, видимо дело привычки.
-          </p>
-          <p>
-            Спасибо ребятам и инструкторам за помощь и поддержку!
-          </p>
-        </li>
-      </ul>
+            <p>
+              Поход понравился!!<br> Ранее не ходила на такие длинные дистанции.
+              В первый день прошли около 30 км, физически я устала на 18м,
+              поэтому не была уверена, пройду ли до конца.
+              Но шла и шла впереди, не плелась в конце группы.
+              К моему удивлению второй день прошел для меня легче,
+              чем ожидала, видимо дело привычки.
+            </p>
+            <p>
+              Спасибо ребятам и инструкторам за помощь и поддержку!
+            </p>
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
   <section class="gallery swiper-container-gallery">

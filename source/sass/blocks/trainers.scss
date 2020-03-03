@@ -3,25 +3,41 @@
   flex-direction: column;
   max-width: $maxWidthDesktop;
   margin: 0 auto;
-  //overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 .trainers__wrapper {
   display: flex;
   justify-content: space-between;
+  padding: 0 21px;
 }
 
 .trainers__wrapper h3 {
-  margin-top: 2px;
+  margin-top: 19px;
   font-weight: bold;
   font-size: 21px;
+  line-height: 26px;
   color: $mainDark;
+}
+
+.trainers__buttons-wrapper {
+  display: flex;
+  position: relative;
+  bottom: -11px;
+}
+
+.trainers__list-wrapper {
+  box-sizing: border-box;
+  max-width: 1210px;
+  padding-left: 22px;
+  padding-top: 10px;
+  overflow-x: hidden;
 }
 
 .trainers__list {
   justify-content: flex-start;
   flex-wrap: nowrap;
-  margin-bottom: 61px;
+  margin-bottom: 50px;
 }
 
 .trainers__list-item {
@@ -32,15 +48,16 @@
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.09);
   padding: 14px;
   padding-left: 16px;
-  margin-right: 8px;
+  margin-right: 4px;
 }
 
 .trainers__list-item img {
-  margin-bottom: 22px;
+  display: block;
+  margin-bottom: 8px;
 }
 
 .trainers__list-item p {
-  width: auto;
+  width: 202px;
   font-size: 12px;
   line-height: 15px;
 
@@ -68,7 +85,7 @@
   width: 22px;
   height: 22px;
   border: 1px solid #9ac2e6;
-  margin-top: 4px;
+  margin-top: 18px;
   background-image: url("../img/icon-black-vk.svg");
   background-position: center center;
   background-repeat: no-repeat;

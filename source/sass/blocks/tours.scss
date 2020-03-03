@@ -28,17 +28,17 @@
 .tours__list {
   justify-content: flex-start;
   flex-wrap: nowrap;
-  margin-bottom: 31px;
+  margin-bottom: 35px;
+  position: relative;
 }
 
 .tours__list-item {
   position: relative;
   color: white;
-  margin-right: 21px;
+  margin-right: 22px;
   margin-bottom: 21px;
   width: 384px;
   min-width: 384px;
-  //max-width: 384px;
 }
 
 .tours__list-item::after {
@@ -82,6 +82,7 @@
   @include reset;
   padding-bottom: 13px;
   margin-bottom: 22px;
+  margin-left: -3px;
   z-index: 10;
 }
 
@@ -122,7 +123,7 @@
 .tours__list-item-inner-list--three-stars .tours__list-item-inner-list-item--difficulty {
   width: 79px;
   background-image: url("../img/three-of-five-stars.svg");
-  background-position: center bottom 6px;
+  background-position: center bottom 3px;
   background-repeat: no-repeat;
 }
 
@@ -215,10 +216,10 @@
 }
 
 .tours__link {
-  display: flex;
-  align-items: center;
+  width: auto;
   margin: 0 auto;
   margin-bottom: 84px;
+  padding-left: 25px;
   font-weight: bold;
   font-size: 16px;
   line-height: 20px;
@@ -245,6 +246,8 @@
   background-image: url("../img/all-tours-icon.svg");
   background-position: center center;
   background-repeat: no-repeat;
+  position: relative;
+  top: 4px;
 }
 
 @media (max-width: $tabletResolution) {
