@@ -31,7 +31,7 @@
 }
 
 @media (max-width: $tabletResolution) {
-  .wrapper-second {
-    border-bottom: none;
+  .wrapper-second::after {
+    display: none;
   }
 }

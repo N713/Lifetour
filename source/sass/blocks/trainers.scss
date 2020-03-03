@@ -48,7 +48,7 @@
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.09);
   padding: 14px;
   padding-left: 16px;
-  margin-right: 4px;
+  margin-right: 6px;
 }
 
 .trainers__list-item img {
@@ -100,6 +100,11 @@
 }
 
 @media (max-width: $tabletResolution) {
+  .trainers {
+    padding: 0 90px;
+    padding-top: 17px;
+  }
+
   .trainers__wrapper h3 {
     font-size: 18px;
     line-height: 22px;
@@ -107,13 +112,29 @@
     margin-left: 2px;
   }
 
-  .training__buttons-wrapper {
-    position: relative;
-    top: 9px;
+  .trainers__buttons-wrapper {
+    bottom: -5px;
+  }
+
+  .trainers__list-wrapper {
+    padding-top: 23px;
   }
 
   .trainers__list .trainers__list-item p {
     width: auto;
+  }
+
+  .training__wrapper::after {
+    content: "";
+    display: inline-block;
+    width: 11.2%;
+    height: 390px;
+    margin-top: 290px;
+    position: absolute;
+    background-color: white;
+    opacity: 0.8;
+    right: 0;
+    z-index: 1;
   }
 }
 

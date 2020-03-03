@@ -140,7 +140,7 @@
 
 @media (max-width: $tabletResolution) {
   .feedback__wrapper {
-    padding-right: 182px;
+    padding-right: 32px;
     margin-bottom: 42px;
   }
 
@@ -162,6 +162,12 @@
   .feedback__buttons-wrapper {
     position: relative;
     bottom: 12px;
+    right: -30px;
+  }
+
+  .feedback__wrapper-outer {
+    padding: 0 111px;
+    padding-top: 20px;
   }
 
   .feedback__list {

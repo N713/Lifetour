@@ -88,8 +88,8 @@
 
 @media (max-width: $tabletResolution) {
   .questions {
-    padding-top: 236px;
-    padding-bottom: 220px;
+    padding-top: 225px;
+    padding-bottom: 187px;
   }
 
   .questions__wrapper h2 {
@@ -131,7 +131,7 @@
   }
 }
 
-@media (max-width: $tabletResolution) {
+@media (max-width: $mobileResolution) {
   .questions {
     padding-top: 190px;
     padding-bottom: 139px;

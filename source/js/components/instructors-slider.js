@@ -1,7 +1,7 @@
 import Swiper from "swiper";
 import {setWidth} from "./utils";
 
-const SPACE_BETWEEN = 4;
+const SPACE_BETWEEN = 6;
 const card = document.body.querySelector(`.trainers .trainers__list .trainers__list-item`);
 
 const instructorsSwiper = new Swiper ('.swiper-container-trainers', {

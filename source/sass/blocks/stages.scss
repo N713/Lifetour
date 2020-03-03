@@ -100,17 +100,17 @@
 }
 
 @media (max-width: $tabletResolution) {
-  .training {
+  .stages {
     margin: 0 auto;
-    padding-top: 50px;
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0 56px;
+    padding-top: 12px;
   }
 
-  .training h3 {
+  .stages h3 {
     font-size: 18px;
     line-height: 22px;
-    margin-bottom: 51px;
+    margin-bottom: 49px;
+    padding-left: 8.7%;
   }
 
   .stages__list {
