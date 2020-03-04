@@ -62,7 +62,9 @@
 }
 
 .header__list {
-  justify-content: center;
+  justify-content: flex-start;
+  position: relative;
+  left: 45px;
 }
 
 .header__list-item {

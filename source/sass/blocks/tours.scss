@@ -61,7 +61,6 @@
 .tours__list-item-wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   box-sizing: border-box;
   width: 384px;
   min-height: 412px;
@@ -102,6 +101,10 @@
   justify-content: flex-start;
   margin-bottom: 22px;
   z-index: 10;
+}
+
+.tours__list-item-inner-list:first-of-type {
+  padding-top: 54%;
 }
 
 .tours__list-item-inner-list:last-of-type {
@@ -226,6 +229,7 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   text-decoration: none;
+  text-align: center;
   color: $mainDark;
   position: relative;
   right: 10px;
