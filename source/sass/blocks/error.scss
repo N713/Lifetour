@@ -4,7 +4,7 @@
 }
 
 .error::after {
-  content: "Введите полный номер";
+  content: attr(data-error) "";
   display: flex;
   justify-content: center;
   align-items: center;
