@@ -2,8 +2,8 @@ import Swiper from "swiper";
 
 const gallerySwiper = new Swiper ('.swiper-container-gallery', {
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.swiper-button-next-gallery',
+    prevEl: '.swiper-button-prev-gallery',
   },
   speed: 400,
   spaceBetween: 6,
