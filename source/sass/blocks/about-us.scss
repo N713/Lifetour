@@ -4,7 +4,6 @@
   margin: 0 auto;
   padding-top: 70px;
   padding-bottom: 73px;
-  overflow-x: hidden;
 }
 
 .about-us,
@@ -23,11 +22,15 @@
   width: 52%;
   height: 37.5%;
   margin-left: -19px;
+  position: relative;
+  top: 14px;
+  left: 5px;
 }
 
 .about-us__wrapper-text {
   padding-left: 53px;
   padding-top: 54px;
+  overflow-x: hidden;
 }
 
 .about-us__wrapper-text h2,

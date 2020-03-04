@@ -54,6 +54,8 @@
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: center;
+  position: relative;
+  left: 13px;
   width: 70.3%;
 }
 
@@ -77,14 +79,14 @@
 .form__input-wrapper {
   margin-right: 13px;
   margin-bottom: 13px;
-  width: 35.9%;
+  width: 34.9%;
 }
 
 .questions__wrapper form button {
   min-height: 64px;
   margin-bottom: 13px;
-  margin-left: 4px;
-  width: 25%;
+  margin-left: 6px;
+  width: 24.5%;
 }
 
 .questions__wrapper p br {
