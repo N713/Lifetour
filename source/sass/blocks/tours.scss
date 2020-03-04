@@ -330,6 +330,10 @@
     margin-bottom: 22px;
   }
 
+  .tours__list-item-inner-list:first-of-type {
+    padding-top: 57%;
+  }
+
   .tours__list-item-inner-list:last-of-type {
     flex-wrap: nowrap;
   }
