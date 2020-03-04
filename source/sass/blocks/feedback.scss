@@ -174,15 +174,19 @@
     position: relative;
   }
 
+  .feedback__list-wrapper {
+    overflow: visible;
+  }
+
   .feedback__wrapper::after {
     content: "";
     display: inline-block;
-    width: 39.5%;
+    width: 33.7%;
     height: 495px;
-    margin-top: 60px;
+    margin-top: 76px;
     position: absolute;
-    background-color: white;
-    opacity: 0.8;
+    background-color: #fff;
+    opacity: .8;
     right: 0;
     z-index: 1;
   }
