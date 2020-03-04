@@ -16,20 +16,22 @@
 
 @media (max-width: $tabletResolution) {
   .wrapper {
-    background-size: 950px 812.5px, cover;
-    background-position: left 47% top 14%, left 56% top 11px;
+    background-size: 950px 812.5px, 145%;
+    background-position: left 47% top 14%, left 56% top 2px;
     padding-bottom: 150px;
   }
 }
 
 @media (max-width: $mobileResolution) {
   .wrapper {
-    background-image: none, url("../img/main-back@1x.jpg");
-    background-position: center, left 63% top;
+    background-image: url("../img/main-back@1x.jpg");
+    background-position: left 63% top;
     padding-bottom: 40px;
+    background-size: 264%;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: none, url("../img/main-back@2x.jpg");
+      background-size: 264%;
     }
   }
 }

@@ -67,8 +67,17 @@
     padding-bottom: 21px;
   }
 
+  .about-us__wrapper-text {
+    width: 278px;
+    overflow: visible;
+  }
+
   .about-us__wrapper-text div {
     margin-bottom: 57px;
+  }
+
+  .about-us__wrapper-text div h3 {
+    width: 278px;
   }
 
   .about-us__wrapper-text div:first-of-type p {
@@ -136,6 +145,7 @@
     padding-top: 0;
     position: relative;
     top: -92px;
+    overflow: hidden;
   }
 
   .about-us__wrapper-text {

@@ -34,4 +34,19 @@
   .wrapper-second::after {
     display: none;
   }
+
+  .wrapper-second__inner {
+    background-image: url("../img/tours-clouds-right@1x.png");
+    background-position: right -45% top 1%;
+    background-repeat: no-repeat;
+    background-size: 450px 1050px;
+
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/tours-clouds-right@2x.png");
+      background-position: right -49% top 5%;
+      background-repeat: no-repeat;
+      background-size: 61% auto;
+    }
+  }
 }

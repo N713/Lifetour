@@ -5,3 +5,15 @@
 .header-with-pseudo::after {
   @include sectionHeaderDesktopPseudo;
 }
+
+@media (max-width: $tabletResolution) {
+  .header-with-pseudo::after {
+    width: 130%;
+  }
+}
+
+@media (max-width: $mobileResolution) {
+  .header-with-pseudo::after {
+    width: 100%;
+  }
+}

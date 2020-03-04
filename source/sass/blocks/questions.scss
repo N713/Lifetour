@@ -114,12 +114,12 @@
 
   .questions__wrapper form {
     flex-direction: column;
-    padding-left: 30px;
   }
 
   .questions__wrapper form input,
   .questions__wrapper form button {
     width: 268px;
+    box-sizing: border-box;
     min-height: 50px;
     text-align: center;
     padding: 5px;
@@ -151,7 +151,7 @@
 
   .questions__wrapper p {
     width: 218px;
-    margin-bottom: 26px;
+    margin-bottom: 24px;
   }
 
   .questions__wrapper p br {
@@ -160,6 +160,7 @@
 
   .questions__wrapper form {
     padding-left: 0;
+    padding-right: 28px;
     width: auto;
   }
 

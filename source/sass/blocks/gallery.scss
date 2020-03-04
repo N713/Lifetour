@@ -125,6 +125,11 @@
     margin-right: 14%;
   }
 
+  .gallery__wrapper-header .button {
+    top: 28px;
+    right: 3px;
+  }
+
   .gallery__buttons-wrapper {
     top: 19px;
     left: -3px;
@@ -156,6 +161,11 @@
 
   .gallery__wrapper .header-with-pseudo::after {
     bottom: 0;
+  }
+
+  .gallery__wrapper-header .button {
+    top: 107px;
+    right: 1px;
   }
 
   .gallery__wrapper-header p {
