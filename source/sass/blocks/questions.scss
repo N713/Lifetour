@@ -2,7 +2,7 @@
   width: 100%;
   background-color: darkgreen;
   background-image: url("../img/form-background@1x.jpg");
-  background-position: center top 10px;
+  background-position: center top 92%;
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 305px;
@@ -97,6 +97,8 @@
   .questions {
     padding-top: 225px;
     padding-bottom: 187px;
+    background-size: 205% 185%;
+    background-position: right 47% top 89%;
   }
 
   .questions__wrapper h2 {
@@ -142,6 +144,8 @@
   .questions {
     padding-top: 190px;
     padding-bottom: 105px;
+    background-size: 450% 185%;
+    background-position: right 57% top 84%;
   }
 
   .questions__wrapper h2 {
