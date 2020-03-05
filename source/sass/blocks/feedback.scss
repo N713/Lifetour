@@ -217,11 +217,16 @@
     line-height: 27px;
     margin-top: 15px;
     margin-bottom: 33px;
+    bottom: 2px;
   }
 
   .feedback__wrapper h2::after {
     font-size: 30px;
     line-height: 37px;
+  }
+
+  .feedback__wrapper .header-with-pseudo::after {
+    bottom: 0;
   }
 
   .feedback__buttons-wrapper {

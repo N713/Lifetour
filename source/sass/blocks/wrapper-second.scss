@@ -44,9 +44,16 @@
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/tours-clouds-right@2x.png");
-      background-position: right -49% top 5%;
+      background-position: right -48.5% top 6%;
       background-repeat: no-repeat;
-      background-size: 61% auto;
+      background-size: 60%;
     }
+  }
+}
+
+@media (max-width: $mobileResolution) {
+  .wrapper-second__inner {
+    background-position: right 205% top 6%;
+    background-size: 400px 750px;
   }
 }
