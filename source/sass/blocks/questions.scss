@@ -150,11 +150,11 @@
     padding-top: 190px;
     padding-bottom: 105px;
     background-size: 340%;
-    background-position: right 61% bottom 100%;
+    background-position: right 61% center;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-size: 353%;
-      background-position: right 60% bottom 100%;
+      background-position: right 60% center;
     }
   }
 
