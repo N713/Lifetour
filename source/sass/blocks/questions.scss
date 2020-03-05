@@ -2,7 +2,7 @@
   width: 100%;
   background-color: darkgreen;
   background-image: url("../img/form-background@1x.jpg");
-  background-position: center top 92%;
+  background-position: center top 72%;
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 305px;
@@ -10,6 +10,7 @@
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/form-background@2x.jpg");
+    background-position: center top 68%;
   }
 
   overflow-x: hidden;
@@ -97,8 +98,12 @@
   .questions {
     padding-top: 225px;
     padding-bottom: 187px;
-    background-size: 205% 185%;
-    background-position: right 47% top 89%;
+    background-size: 200%;
+    background-position: right 47% top 70%;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-position: right 47% top 67%;
+    }
   }
 
   .questions__wrapper h2 {
@@ -144,8 +149,13 @@
   .questions {
     padding-top: 190px;
     padding-bottom: 105px;
-    background-size: 450% 185%;
-    background-position: right 57% top 84%;
+    background-size: 340%;
+    background-position: right 61% bottom 100%;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-size: 353%;
+      background-position: right 60% bottom 100%;
+    }
   }
 
   .questions__wrapper h2 {
