@@ -15,20 +15,25 @@ const instructorsSwiper = new Swiper ('.swiper-container-trainers', {
       slidesPerView: 1,
       slidesPerGroup: 1,
       spaceBetween: SPACE_BETWEEN,
-      width: card.offsetWidth,
+      width: setWidth(card.offsetWidth, 1, SPACE_BETWEEN, 5),
     },
 
     768: {
-      slidesPerView: 1,
-      slidesPerGroup: 1,
-      width: setWidth(card.offsetWidth, 2, SPACE_BETWEEN, 2),
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      width: setWidth(card.offsetWidth, 2, SPACE_BETWEEN, 8),
     },
 
     1024: {
+      slidesPerView: 4,
+      slidesPerGroup: 4,
+      width: setWidth(card.offsetWidth, 4, SPACE_BETWEEN, 8),
+    },
+
+    1210: {
       slidesPerView: 5,
       slidesPerGroup: 5,
-      width: setWidth(card.offsetWidth, 5, SPACE_BETWEEN, 4),
-    },
+    }
   }
 });
 

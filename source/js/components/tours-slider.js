@@ -19,14 +19,20 @@ const swiperTours = new Swiper ('.swiper-container-tours', {
     },
 
     768: {
-      width: setWidth(card.offsetWidth, 2, SPACE_BETWEEN, 0),
+      width: setWidth(card.offsetWidth, 1.5, SPACE_BETWEEN, 2.8),
     },
 
     1024: {
+      slidesPerView: 2,
+      slidesPerGroup: 1,
+      width: setWidth(card.offsetWidth, 2, SPACE_BETWEEN, 4.2),
+    },
+
+    1200: {
       slidesPerView: 3,
       slidesPerGroup: 3,
-      setWrapperSize: true,
-    },
+      width: setWidth(card.offsetWidth, 3, SPACE_BETWEEN, 5.3),
+    }
   }
 });
 
