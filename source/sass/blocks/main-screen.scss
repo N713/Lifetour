@@ -4,7 +4,7 @@
   margin: 0 auto;
   color: white;
   padding: 0 20px;
-  padding-top: 137px;
+  padding-top: 9.7vw;
 }
 
 .main-screen h1,
@@ -60,7 +60,7 @@
 @media (max-width: $tabletResolution) {
   .main-screen {
     padding: 0 112px;
-    padding-top: 79px;
+    padding-top: 10.3vw;
   }
 
   .main-screen h1 {
@@ -95,7 +95,7 @@
 @media (max-width: $mobileResolution) {
   .main-screen {
     padding: 0 20px;
-    padding-top: 72px;
+    padding-top: 22.6vw;
   }
 
   .main-screen h1 {
