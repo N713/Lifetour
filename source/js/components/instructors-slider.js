@@ -7,8 +7,8 @@ const cards = document.body.querySelectorAll(`.trainers .trainers__list .trainer
 const nextButton = document.body.querySelector(`.trainers .trainers__buttons-wrapper .button--right`);
 const prevButton = document.body.querySelector(`.trainers .trainers__buttons-wrapper .button--left`);
 
-let currentBrightCard = 2;
-let currentBrightCardMobile = 1;
+let currentLightCard = 2;
+let currentLightCardMobile = 1;
 
 const instructorsSwiper = new Swiper ('.swiper-container-trainers', {
   navigation: {
@@ -43,40 +43,40 @@ const instructorsSwiper = new Swiper ('.swiper-container-trainers', {
   }
 });
 
-const brightNextCard = () => {
-  if (currentBrightCard !== cards.length - 1) {
-    prevButton.addEventListener(`click`, brightPrevCard);
+const lightNextCard = () => {
+  if (currentLightCard !== cards.length - 1) {
+    prevButton.addEventListener(`click`, lightPrevCard);
 
-    cards[currentBrightCard].style.opacity = `1`;
-    currentBrightCard += 1;
-    console.log(currentBrightCard);
-    cards[currentBrightCard].style.opacity = `0.2`;
-  } else if (currentBrightCard === cards.length - 1) {
-    cards[currentBrightCard].style.opacity = `1`;
-    currentBrightCard += 2;
-    nextButton.removeEventListener(`click`, brightNextCard);
+    cards[currentLightCard].classList.remove(`lightness`);
+    currentLightCard += 1;
+    console.log(currentLightCard);
+    cards[currentLightCard].classList.add(`lightness`);
+  } else if (currentLightCard === cards.length - 1) {
+    cards[currentLightCard].classList.remove(`lightness`);
+    currentLightCard += 2;
+    nextButton.removeEventListener(`click`, lightNextCard);
   }
 };
 
-const brightPrevCard = () => {
-  if (currentBrightCard !== 2) {
-    nextButton.addEventListener(`click`, brightNextCard);
+const lightPrevCard = () => {
+  if (currentLightCard !== 2) {
+    nextButton.addEventListener(`click`, lightNextCard);
 
-    currentBrightCard = currentBrightCard - 1;
-    console.log(currentBrightCard);
-    cards[currentBrightCard].style.opacity = `0.2`;
-  } else if(currentBrightCard === cards.length - 1) {
-    cards[currentBrightCard].style.opacity = `1`;
+    currentLightCard = currentLightCard - 1;
+    console.log(currentLightCard);
+    cards[currentLightCard].classList.add(`lightness`);
+  } else if(currentLightCard === cards.length - 1) {
+    cards[currentLightCard].classList.remove(`lightness`);
   }
 };
 
-const brightCard = () => {
+const lightCard = () => {
   if (window.matchMedia(`(max-width: 768px)`).matches) {
-    cards[currentBrightCard].style.opacity = `0.2`;
+    cards[currentLightCard].classList.add(`lightness`);
 
-    nextButton.addEventListener(`click`, brightNextCard);
-    prevButton.addEventListener(`click`, brightPrevCard);
+    nextButton.addEventListener(`click`, lightNextCard);
+    prevButton.addEventListener(`click`, lightPrevCard);
   }
 };
 
-export {instructorsSwiper, brightCard};
+export {instructorsSwiper, lightCard};
