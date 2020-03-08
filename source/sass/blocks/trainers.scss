@@ -129,19 +129,6 @@
   .trainers__list .trainers__list-item p {
     width: auto;
   }
-
-  .trainers__wrapper::after {
-    content: "";
-    display: inline-block;
-    width: 23.1%;
-    height: 390px;
-    margin-top: 67px;
-    position: absolute;
-    background-color: white;
-    opacity: 0.8;
-    right: 0;
-    z-index: 1;
-  }
 }
 
 @media (max-width: $mobileResolution) {
@@ -151,19 +138,6 @@
 
   .trainers__wrapper {
     padding: 0 20px;
-  }
-
-  .trainers__wrapper::after {
-    content: "";
-    display: inline-block;
-    width: 19.2%;
-    height: 390px;
-    margin-top: 66px;
-    position: absolute;
-    background-color: white;
-    opacity: 0.8;
-    right: 0;
-    z-index: 1;
   }
 
   .trainers__wrapper h3 {

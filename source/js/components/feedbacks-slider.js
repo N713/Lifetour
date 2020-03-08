@@ -25,15 +25,6 @@ const swiperFeedback = new Swiper ('.swiper-container-feedback', {
       width: setWidth(card.offsetWidth, 1, SPACE_BETWEEN, 1.2),
     },
 
-    /*
-    1024: {
-      slidesPerView: 3,
-      slidesPerGroup: 2,
-      width: setWidth(card.offsetWidth, 3, SPACE_BETWEEN, 1),
-    },
-
-     */
-
     1300: {
       slidesPerView: 3,
       slidesPerGroup: 2,

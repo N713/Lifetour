@@ -3,6 +3,12 @@ import {setWidth} from "./utils";
 
 const SPACE_BETWEEN = 4;
 const card = document.body.querySelector(`.trainers .trainers__list .trainers__list-item`);
+const cards = document.body.querySelectorAll(`.trainers .trainers__list .trainers__list-item`);
+const nextButton = document.body.querySelector(`.trainers .trainers__buttons-wrapper .button--right`);
+const prevButton = document.body.querySelector(`.trainers .trainers__buttons-wrapper .button--left`);
+
+let currentBrightCard = 2;
+let currentBrightCardMobile = 1;
 
 const instructorsSwiper = new Swiper ('.swiper-container-trainers', {
   navigation: {
@@ -20,7 +26,7 @@ const instructorsSwiper = new Swiper ('.swiper-container-trainers', {
 
     768: {
       slidesPerView: 2,
-      slidesPerGroup: 2,
+      slidesPerGroup: 1,
       width: setWidth(card.offsetWidth, 2, SPACE_BETWEEN, 8),
     },
 
@@ -37,4 +43,40 @@ const instructorsSwiper = new Swiper ('.swiper-container-trainers', {
   }
 });
 
-export {instructorsSwiper};
+const brightNextCard = () => {
+  if (currentBrightCard !== cards.length - 1) {
+    prevButton.addEventListener(`click`, brightPrevCard);
+
+    cards[currentBrightCard].style.opacity = `1`;
+    currentBrightCard += 1;
+    console.log(currentBrightCard);
+    cards[currentBrightCard].style.opacity = `0.2`;
+  } else if (currentBrightCard === cards.length - 1) {
+    cards[currentBrightCard].style.opacity = `1`;
+    currentBrightCard += 2;
+    nextButton.removeEventListener(`click`, brightNextCard);
+  }
+};
+
+const brightPrevCard = () => {
+  if (currentBrightCard !== 2) {
+    nextButton.addEventListener(`click`, brightNextCard);
+
+    currentBrightCard = currentBrightCard - 1;
+    console.log(currentBrightCard);
+    cards[currentBrightCard].style.opacity = `0.2`;
+  } else if(currentBrightCard === cards.length - 1) {
+    cards[currentBrightCard].style.opacity = `1`;
+  }
+};
+
+const brightCard = () => {
+  if (window.matchMedia(`(max-width: 768px)`).matches) {
+    cards[currentBrightCard].style.opacity = `0.2`;
+
+    nextButton.addEventListener(`click`, brightNextCard);
+    prevButton.addEventListener(`click`, brightPrevCard);
+  }
+};
+
+export {instructorsSwiper, brightCard};
