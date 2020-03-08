@@ -8,3 +8,7 @@ import {lightCardFeedback} from "./components/feedbacks-slider";
 
 lightCard();
 lightCardFeedback();
+
+window.addEventListener(`resize`, () => {
+  window.location.reload();
+});
