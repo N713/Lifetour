@@ -70,6 +70,7 @@
   padding-right: 10px;
   border: 1px solid white;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.09);
+  transition: opacity 500ms ease-in 250ms;
 }
 
 .feedback__list-item-wrapper {
@@ -177,19 +178,6 @@
 
   .feedback__list-wrapper {
     overflow: visible;
-  }
-
-  .feedback__wrapper::after {
-    content: "";
-    display: inline-block;
-    width: 33.7%;
-    height: 495px;
-    margin-top: 76px;
-    position: absolute;
-    background-color: #fff;
-    opacity: .8;
-    right: 0;
-    z-index: 1;
   }
 }
 
