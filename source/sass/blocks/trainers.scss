@@ -125,6 +125,12 @@
 
   .trainers__list-item {
     margin-right: 6px;
+    opacity: 0.2;
+  }
+
+  .trainers .swiper-slide-active,
+  .trainers .swiper-slide-next {
+    opacity: 1;
   }
 
   .trainers__list .trainers__list-item p {
@@ -171,5 +177,9 @@
     width: auto;
     font-size: 12px;
     line-height: 15px;
+  }
+
+  .trainers .swiper-slide-next {
+    opacity: 0.2;
   }
 }

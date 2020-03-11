@@ -2,12 +2,7 @@ import Swiper from "swiper";
 import {utils} from "./utils";
 
 const SPACE_BETWEEN = 4;
-const CLASS_NAME = `lightness`;
-
 const card = document.body.querySelector(`.trainers .trainers__list .trainers__list-item`);
-const cards = Array.from(document.body.querySelectorAll(`.trainers .trainers__list .trainers__list-item`));
-const nextButton = document.body.querySelector(`.trainers .trainers__buttons-wrapper .button--right`);
-const prevButton = document.body.querySelector(`.trainers .trainers__buttons-wrapper .button--left`);
 
 const instructorsSwiper = new Swiper ('.swiper-container-trainers', {
   navigation: {
@@ -42,28 +37,4 @@ const instructorsSwiper = new Swiper ('.swiper-container-trainers', {
   }
 });
 
-const lightCard = () => {
-  const next = document.body.querySelector(`.trainers .trainers__list .swiper-slide-next`);
-  const active = document.body.querySelector(`.trainers .trainers__list .swiper-slide-active`);
-
-  if (cards.indexOf(active) === cards.length - 1) {
-    nextButton.removeEventListener(`click`, lightCard);
-  } else {
-    next.classList.add(CLASS_NAME);
-  }
-};
-
-const removeLightness = () => {
-  const active = document.body.querySelector(`.trainers .trainers__list .swiper-slide-active`);
-  active.classList.remove(CLASS_NAME);
-};
-
-const addTrainersListeners = () => {
-  lightCard();
-
-  nextButton.addEventListener(`click`, lightCard);
-  nextButton.addEventListener(`click`, removeLightness);
-  prevButton.addEventListener(`click`, lightCard);
-};
-
-export {instructorsSwiper, addTrainersListeners};
+export {instructorsSwiper};

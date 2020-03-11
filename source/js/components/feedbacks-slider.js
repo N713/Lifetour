@@ -3,12 +3,8 @@ import {utils} from "./utils";
 
 const SPACE_BETWEEN = 15;
 const SPACE_BETWEEN_MOBILE = 21;
-const CLASS_NAME = `lightness`;
 
 const card = document.body.querySelector(`.feedback .feedback__list .feedback__list-item`);
-const cards = document.body.querySelectorAll(`.feedback .feedback__list .feedback__list-item`);
-const nextButton = document.body.querySelector(`.feedback .feedback__buttons-wrapper .button--right`);
-const prevButton = document.body.querySelector(`.feedback .feedback__buttons-wrapper .button--left`);
 
 const swiperFeedback = new Swiper ('.swiper-container-feedback', {
   navigation: {
