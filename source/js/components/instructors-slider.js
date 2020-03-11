@@ -1,17 +1,13 @@
 import Swiper from "swiper";
 import {utils} from "./utils";
 
-const GAP = 1;
 const SPACE_BETWEEN = 4;
 const CLASS_NAME = `lightness`;
 
 const card = document.body.querySelector(`.trainers .trainers__list .trainers__list-item`);
-const cards = document.body.querySelectorAll(`.trainers .trainers__list .trainers__list-item`);
+const cards = Array.from(document.body.querySelectorAll(`.trainers .trainers__list .trainers__list-item`));
 const nextButton = document.body.querySelector(`.trainers .trainers__buttons-wrapper .button--right`);
 const prevButton = document.body.querySelector(`.trainers .trainers__buttons-wrapper .button--left`);
-
-let currentLightCard = 2;
-let currentLightCardMobile = 1;
 
 const instructorsSwiper = new Swiper ('.swiper-container-trainers', {
   navigation: {
@@ -46,78 +42,28 @@ const instructorsSwiper = new Swiper ('.swiper-container-trainers', {
   }
 });
 
-const lightNextCard = () => {
-  if (currentLightCard < cards.length - GAP) {
-    utils.addListener(prevButton, lightPrevCard);
-    utils.removeCssClass(cards[currentLightCard], CLASS_NAME);
-    currentLightCard += GAP;
-    utils.addCssClass(cards[currentLightCard], CLASS_NAME);
-  } else {
-    utils.removeCssClass(cards[currentLightCard], CLASS_NAME);
-    currentLightCard += 2 * GAP;
-    utils.removeListener(nextButton, lightNextCard);
-  }
-};
-
-const lightNextCardMobile = () => {
-  if (currentLightCardMobile < cards.length - GAP) {
-    utils.addListener(prevButton, lightPrevCardMobile);
-    utils.removeCssClass(cards[currentLightCardMobile], CLASS_NAME);
-    currentLightCardMobile += GAP;
-    utils.addCssClass(cards[currentLightCardMobile], CLASS_NAME);
-  } else {
-    cards[currentLightCardMobile].classList.remove(CLASS_NAME);
-    currentLightCardMobile += GAP;
-    nextButton.removeEventListener(`click`, lightNextCardMobile);
-  }
-};
-
-const lightPrevCard = () => {
-  if (currentLightCard !== 2 * GAP) {
-    utils.addListener(nextButton, lightNextCard);
-    currentLightCard = currentLightCard - GAP;
-    utils.addCssClass(cards[currentLightCard], CLASS_NAME);
-  } else if(currentLightCard === cards.length - GAP) {
-    utils.removeCssClass(cards[currentLightCard], CLASS_NAME);
-  }
-};
-
-const lightPrevCardMobile = () => {
-  if (currentLightCardMobile !== GAP) {
-    utils.addListener(nextButton, lightNextCardMobile);
-    currentLightCardMobile = currentLightCardMobile - GAP;
-    utils.addCssClass(cards[currentLightCardMobile], CLASS_NAME);
-  } else if(currentLightCardMobile === cards.length - GAP) {
-    utils.addCssClass(cards[currentLightCardMobile], CLASS_NAME);
-  }
-};
-
-const setHandlers = () => {
-  utils.removeListener(nextButton, lightNextCardMobile);
-  utils.removeListener(prevButton, lightPrevCardMobile);
-  utils.addListener(nextButton, lightNextCard);
-  utils.addListener(prevButton, lightPrevCard);
-};
-
-const setMobileHandlers = () => {
-  utils.removeListener(nextButton, lightNextCard);
-  utils.removeListener(prevButton, lightPrevCard);
-  utils.addListener(nextButton, lightNextCardMobile);
-  utils.addListener(prevButton, lightPrevCardMobile);
-};
-
 const lightCard = () => {
-  if (window.matchMedia(`(max-width: 768px)`).matches) {
-    utils.addCssClass(cards[currentLightCard], CLASS_NAME);
-    utils.removeCssClass(cards[currentLightCardMobile], CLASS_NAME);
-    setHandlers();
-  }
+  const next = document.body.querySelector(`.trainers .trainers__list .swiper-slide-next`);
+  const active = document.body.querySelector(`.trainers .trainers__list .swiper-slide-active`);
 
-  if (window.matchMedia(`(max-width: 320px)`).matches) {
-    utils.addCssClass(cards[currentLightCardMobile], CLASS_NAME);
-    utils.addCssClass(cards[currentLightCard], CLASS_NAME);
-    setMobileHandlers();
+  if (cards.indexOf(active) === cards.length - 1) {
+    nextButton.removeEventListener(`click`, lightCard);
+  } else {
+    next.classList.add(CLASS_NAME);
   }
 };
 
-export {instructorsSwiper, lightCard};
+const removeLightness = () => {
+  const active = document.body.querySelector(`.trainers .trainers__list .swiper-slide-active`);
+  active.classList.remove(CLASS_NAME);
+};
+
+const addTrainersListeners = () => {
+  lightCard();
+
+  nextButton.addEventListener(`click`, lightCard);
+  nextButton.addEventListener(`click`, removeLightness);
+  prevButton.addEventListener(`click`, lightCard);
+};
+
+export {instructorsSwiper, addTrainersListeners};
